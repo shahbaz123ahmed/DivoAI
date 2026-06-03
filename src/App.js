@@ -451,22 +451,22 @@ function HomePage() {
                   <stop offset="100%" stopColor="#8B5CF6" />
                 </linearGradient>
               </defs>
-              <path 
-                d="M26 80 L50 28 L74 80" 
-                stroke="url(#divoai-logo-gradient)" 
-                strokeWidth="15" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
+              <path
+                d="M26 80 L50 28 L74 80"
+                stroke="url(#divoai-logo-gradient)"
+                strokeWidth="15"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <circle cx="50" cy="74" r="8" fill="url(#divoai-logo-gradient)" />
             </svg>
-            
+
             {/* Brand Name */}
             <div className="logo-text text-2xl font-extrabold tracking-tight transition group-hover:opacity-90 flex items-center text-white">
               <span>Divo</span>
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
             </div>
-            
+
             {/* Divider and Subtitle */}
             <div className="w-1.5 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full group-hover:scale-y-110 transition duration-300"></div>
             <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase hidden sm:inline">IT Solutions</span>
@@ -1446,12 +1446,12 @@ function HomePage() {
                         <stop offset="100%" stopColor="#8B5CF6" />
                       </linearGradient>
                     </defs>
-                    <path 
-                      d="M26 80 L50 28 L74 80" 
-                      stroke="url(#divoai-footer-gradient)" 
-                      strokeWidth="15" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
+                    <path
+                      d="M26 80 L50 28 L74 80"
+                      stroke="url(#divoai-footer-gradient)"
+                      strokeWidth="15"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <circle cx="50" cy="74" r="8" fill="url(#divoai-footer-gradient)" />
                   </svg>
@@ -1567,7 +1567,7 @@ function HomePage() {
                     <i className="fas fa-phone-alt text-xs text-blue-400"></i>
                   </div>
                   <a href="tel:+917260912826" className="text-sm text-slate-400 hover:text-blue-400 transition-colors duration-200">
-                    +91 72609 12860
+                    +91 72609 12826
                   </a>
                 </li>
               </ul>
@@ -1673,7 +1673,7 @@ function HomePage() {
                 e.preventDefault();
                 if (!whatsAppMessage.trim()) return;
                 const encodedMsg = encodeURIComponent(whatsAppMessage.trim());
-                window.open(`https://wa.me/917260912860?text=${encodedMsg}`, '_blank', 'noopener,noreferrer');
+                window.open(`https://wa.me/917260912826?text=${encodedMsg}`, '_blank', 'noopener,noreferrer');
                 setWhatsAppMessage('');
               }}
               className="border-t border-white/5 p-3 bg-[#0a0c10] flex items-center gap-2"
