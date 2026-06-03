@@ -1,0 +1,188 @@
+/* ── Insights Page Specific Styles ── */
+
+/* Custom grid layouts */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Category Pill Styling */
+.category-pill {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+/* Premium Article Card Hover Effects */
+.insight-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Read Modal Styles (Immersive Glass Overlay) */
+.read-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 9, 14, 0.75);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  transition: opacity 0.4s ease;
+}
+
+.read-modal-content {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  transform: scale(0.95) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.read-modal-overlay.active .read-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Typography Styling */
+.modal-article-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-article-body p {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: #94A3B8;
+  margin-bottom: 1.25rem;
+}
+
+.modal-article-body ul, .modal-article-body ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #94A3B8;
+  list-style-type: disc;
+}
+
+.modal-article-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.modal-article-body blockquote {
+  border-left: 4px solid #3B82F6;
+  background: rgba(59, 130, 246, 0.06);
+  padding: 1rem 1.5rem;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  margin: 1.5rem 0;
+  color: #CBD5E1;
+}
+
+/* Callout alert box */
+.modal-article-body .warning-callout {
+  border-left: 4px solid #F59E0B;
+  background: rgba(245, 158, 17, 0.06);
+  padding: 1rem 1.5rem;
+  border-radius: 0 12px 12px 0;
+  margin: 1.5rem 0;
+  color: #CBD5E1;
+}
+
+.modal-article-body pre {
+  background: #020617;
+  padding: 1.25rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin: 1.5rem 0;
+}
+
+.modal-article-body code {
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  color: #38BDF8;
+}
+
+/* Tables inside article details */
+.modal-article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.modal-article-body th {
+  background: rgba(255, 255, 255, 0.03);
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-article-body td {
+  padding: 0.75rem 1rem;
+  color: #94A3B8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glass-morphic newsletter container */
+.newsletter-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+/* Breathing borders for newsletter cards similar to navbar */
+.newsletter-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  border: 2px solid rgba(59, 130, 246, 0.15);
+  pointer-events: none;
+  animation: newsletter-border-breath 35s infinite ease-in-out;
+}
+
+@keyframes newsletter-border-breath {
+  0%, 100% { border-color: rgba(59, 130, 246, 0.15); }
+  10% { border-color: rgba(99, 102, 241, 0.8); }
+  25% { border-color: rgba(168, 85, 247, 0.15); }
+  40% { border-color: rgba(236, 72, 153, 0.8); }
+  55% { border-color: rgba(239, 68, 68, 0.15); }
+  70% { border-color: rgba(249, 115, 22, 0.8); }
+  85% { border-color: rgba(16, 185, 129, 0.15); }
+  95% { border-color: rgba(6, 182, 212, 0.8); }
+}
+
+/* Footer animation defaults for insights page */
+.ins-footer-col-1,
+.ins-footer-col-2,
+.ins-footer-col-3,
+.ins-footer-col-4,
+.ins-footer-bottom-bar {
+  opacity: 0;
+}

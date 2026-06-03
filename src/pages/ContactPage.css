@@ -1,0 +1,82 @@
+/* ── Contact Page Specific Styles ── */
+
+/* Glassmorphic Contact Card */
+.contact-detail-card {
+  background: rgba(17, 24, 39, 0.65);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-detail-card:hover {
+  border-color: rgba(59, 130, 246, 0.2) !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Service Options Buttons */
+.service-option-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-option-btn.active {
+  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+}
+
+/* Budget Range Buttons */
+.budget-option-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.budget-option-btn.active {
+  background: linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.35);
+}
+
+/* Form Panel Card */
+.contact-form-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Input Fields styling */
+.contact-field-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #F8FAFC;
+  transition: all 0.3s ease;
+}
+
+.contact-field-input:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #3B82F6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.25);
+  outline: none;
+}
+
+/* Trust Badges */
+.contact-trust-badge {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.contact-trust-badge:hover {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Footer columns animation initial opacity */
+.con-footer-col-1,
+.con-footer-col-2,
+.con-footer-col-3,
+.con-footer-col-4,
+.con-footer-bottom-bar {
+  opacity: 0;
+}

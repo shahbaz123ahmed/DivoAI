@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background-color: #0a0c10;
+}
+
+/* Custom animations */
+.gradient-text {
+    background: linear-gradient(135deg, #3B82F6, #A855F7, #06B6D4);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+/* Navbar link animation */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #3B82F6, #A855F7);
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Glass card effect */
+.glass-card {
+    background: rgba(20, 24, 32, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(59, 130, 246, 0.6);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float-animation {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Service icon animation */
+.service-icon {
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover .service-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px #3B82F6);
+}
+
+/* Button glow effect */
+.btn-glow {
+    transition: all 0.3s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 8px;
+}

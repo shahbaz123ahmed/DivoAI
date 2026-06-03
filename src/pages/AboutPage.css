@@ -1,0 +1,177 @@
+/* ── About Page Specific Styles ── */
+
+/* Core Values Cards */
+.abt-value-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.abt-value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+}
+
+/* Timeline Custom Styles */
+@media (min-width: 640px) {
+  .timeline-center-line {
+    left: 50% !important;
+  }
+  .timeline-node {
+    left: 50% !important;
+  }
+}
+
+.timeline-content {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: rgba(59, 130, 246, 0.2) !important;
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.1);
+}
+
+/* Leadership Glassmorphism */
+.leadership-card {
+  background: rgba(17, 24, 39, 0.65);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.leadership-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(59, 130, 246, 0.25) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 15px rgba(59, 130, 246, 0.05);
+}
+
+/* Careers CTA Card with Breathing Border */
+.careers-cta-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.careers-cta-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  pointer-events: none;
+}
+
+/* Who We Are Image Slideshow Transitions (Local copy for modularity) */
+.who-we-are-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.who-we-are-slide.slide-active {
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.who-we-are-slide.slide-exiting {
+  z-index: 5;
+}
+
+/* 1. Fade + Zoom Transition */
+.slide-fade-zoom {
+  transition: opacity 2.0s ease-in-out, transform 2.0s cubic-bezier(0.25, 1, 0.5, 1);
+  opacity: 0;
+  transform: scale(1.08);
+}
+
+.slide-fade-zoom.slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-fade-zoom.slide-exiting {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+/* 2. Horizontal Slide Transition */
+.slide-slide-horizontal {
+  transition: transform 2.0s cubic-bezier(0.25, 1, 0.3, 1), opacity 2.0s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-slide-horizontal.slide-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-slide-horizontal.slide-exiting {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* 3. Vertical Slide Transition */
+.slide-slide-vertical {
+  transition: transform 2.0s cubic-bezier(0.25, 1, 0.3, 1), opacity 2.0s ease-in-out;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slide-slide-vertical.slide-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-slide-vertical.slide-exiting {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* 4. Diagonal Wipe (Clip Path) Transition */
+.slide-wipe-diagonal {
+  transition: clip-path 2.0s cubic-bezier(0.76, 0, 0.24, 1), opacity 2.0s ease-in-out;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  opacity: 0;
+}
+
+.slide-wipe-diagonal.slide-active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  opacity: 1;
+}
+
+.slide-wipe-diagonal.slide-exiting {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  opacity: 0;
+}
+
+/* 5. Blur + Fade Transition */
+.slide-blur-fade {
+  transition: opacity 2.0s ease-in-out, filter 2.0s ease-in-out, transform 2.0s cubic-bezier(0.25, 1, 0.5, 1);
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(1.06);
+}
+
+.slide-blur-fade.slide-active {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1);
+}
+
+.slide-blur-fade.slide-exiting {
+  opacity: 0;
+  filter: blur(12px);
+  transform: scale(0.96);
+}
+
+/* Footer Animation Defaults */
+.abt-footer-col-1,
+.abt-footer-col-2,
+.abt-footer-col-3,
+.abt-footer-col-4,
+.abt-footer-bottom-bar {
+  opacity: 0;
+}

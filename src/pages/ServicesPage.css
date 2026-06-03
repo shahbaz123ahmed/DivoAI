@@ -1,0 +1,179 @@
+/* ── Services Page Specific Styles ── */
+
+/* Sticky quick-nav: hide scrollbar on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Process cards hover effect */
+.svc-process-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.svc-process-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.04) 0%, rgba(139, 92, 246, 0.04) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.svc-process-card:hover::before {
+  opacity: 1;
+}
+
+/* Footer column animation starting states (GSAP will animate these in) */
+.svc-footer-col-1,
+.svc-footer-col-2,
+.svc-footer-col-3,
+.svc-footer-col-4,
+.svc-footer-bottom-bar {
+  opacity: 0;
+}
+
+/* Animate fade-in-up for message bubbles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* ── Tech Stack Infinite Scroll Marquee ── */
+.svc-marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Left & Right gradient fade overlays */
+.svc-marquee-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  background: linear-gradient(to right, #F8FAFC 0%, rgba(248, 250, 252, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.svc-marquee-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  background: linear-gradient(to left, #F8FAFC 0%, rgba(248, 250, 252, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Marquee track containing all items */
+.svc-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  animation: svcMarquee 25s linear infinite;
+}
+
+/* Pause marquee on hover for better user experience */
+.svc-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes svcMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Staggered row moving left-to-right */
+.svc-marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  animation: svcMarqueeReverse 25s linear infinite;
+}
+
+.svc-marquee-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes svcMarqueeReverse {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Zig-zag offset layout helpers & bobbing animations */
+@keyframes svcBobUp {
+
+  0%,
+  100% {
+    transform: translateY(-8px);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes svcBobDown {
+
+  0%,
+  100% {
+    transform: translateY(8px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.svc-zigzag-up {
+  animation: svcBobUp 4s ease-in-out infinite;
+}
+
+.svc-zigzag-down {
+  animation: svcBobDown 4s ease-in-out infinite;
+}
+
+/* Base marquee card styling for smooth transforms */
+.svc-marquee-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.svc-marquee-card:hover {
+  animation-play-state: paused !important;
+  transform: translateY(-14px) scale(1.08) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  z-index: 10;
+}
