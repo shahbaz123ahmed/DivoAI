@@ -543,19 +543,194 @@ function HomePage() {
         </div>
       </nav>
 
-      {/* HERO SECTION */}
-      <section id="home" className="relative w-full min-h-[60vh] md:min-h-[80vh] lg:min-h-screen flex items-center justify-center overflow-hidden bg-[#0B0F19]">
-        {/* Ambient Glows */}
-        <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+      {/* HERO SECTION (Dark Theme) */}
+      <section id="home" className="relative pt-32 pb-24 md:pt-40 md:pb-36 flex items-center overflow-hidden">
+        {/* Glow Effects */}
+        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] pulse-glow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[120px] pulse-glow delay-1000"></div>
 
-        {/* Designed Image Container */}
-        <div className="w-full h-full flex items-center justify-center z-10 mt-[72px] lg:mt-0">
-          <img
-            src="/images/herosection.png"
-            alt="DivoAI Brand Hero"
-            className="w-full h-full min-h-[60vh] md:min-h-[80vh] lg:min-h-screen object-cover select-none pointer-events-none"
-          />
+        {/* Grid Background Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column Text */}
+            <div className="lg:col-span-6 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-semibold tracking-wide">
+                <span className="flex h-2 w-2 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Next-Gen Enterprise IT Powerhouse
+              </div>
+
+              <h1 className="hero-animate-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white">
+                Future-proof <br className="hidden sm:inline" />
+                <span className="gradient-text font-black">IT Solutions</span> <br />
+                for digital leaders
+              </h1>
+
+              <p className="hero-animate-text text-slate-300 text-lg md:text-xl max-w-xl leading-relaxed">
+                We engineer performance, security & innovation — transforming operations with elite DevOps pipelines, secure cloud infrastructure, and AI-native products.
+              </p>
+
+              <div className="hero-animate-ctas flex flex-wrap gap-4 pt-4">
+                <a
+                  href="#contact"
+                  className="btn-primary px-8 py-4 rounded-full font-bold text-white flex items-center gap-2 hover:scale-[1.02] transition"
+                >
+                  Start Project <i className="fas fa-arrow-right text-xs"></i>
+                </a>
+                <Link
+                  to="/services"
+                  className="btn-secondary-dark px-8 py-4 rounded-full font-semibold text-white flex items-center gap-2 hover:scale-[1.02] transition"
+                >
+                  <i className="fas fa-compass text-xs text-blue-400"></i> Explore
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column Visual Mockup */}
+            <div className="lg:col-span-6 relative flex justify-center lg:justify-end hero-animate-visual">
+              <div className="hero-mockup-container">
+                {/* Glow Orbs */}
+                <div className="hero-glow-orb hero-glow-orb-blue"></div>
+                <div className="hero-glow-orb hero-glow-orb-purple"></div>
+
+                {/* Light Streaks */}
+                <div className="light-streak light-streak-1"></div>
+                <div className="light-streak light-streak-2"></div>
+
+                <div className="device-stage">
+                  {/* Laptop Device */}
+                  <div className="laptop-device float-laptop">
+                    {/* Laptop Screen Lid */}
+                    <div className="laptop-lid">
+                      <div className="laptop-screen bg-slate-950">
+                        {/* Mini Website */}
+                        <div className="mini-web">
+                          <div className="mini-nav">
+                            <div className="mini-nav-logo">
+                              <span className="text-blue-500 font-bold">D</span>ivoAI
+                            </div>
+                            <div className="mini-nav-links">
+                              <span>Services</span>
+                              <span>Insights</span>
+                              <span>About</span>
+                            </div>
+                            <span className="mini-nav-cta">Get Started</span>
+                          </div>
+
+                          <div className="mini-hero-grid">
+                            <div className="mini-hero-left">
+                              <div className="mini-hero-tag">
+                                <span className="mini-tag-dot"></span> Next-Gen IT Powerhouse
+                              </div>
+                              <h3 className="mini-hero-title">
+                                Future-proof <br />
+                                <span className="mini-gradient-text font-black">IT Solutions</span> <br />
+                                for digital leaders
+                              </h3>
+                              <p className="mini-hero-desc">
+                                We engineer performance, security & innovation — transforming operations.
+                              </p>
+                              <div className="mini-hero-ctas">
+                                <span className="mini-btn-primary">Start Project</span>
+                                <span className="mini-btn-secondary">Explore</span>
+                              </div>
+                            </div>
+
+                            <div className="mini-hero-right">
+                              <div className="mini-dashboard-card">
+                                <div className="mini-db-header">
+                                  <span className="mini-db-dot red"></span>
+                                  <span className="mini-db-dot yellow"></span>
+                                  <span className="mini-db-dot green"></span>
+                                </div>
+                                <div className="mini-db-chart">
+                                  <div className="mini-chart-bar-wrap">
+                                    <div className="mini-chart-bar bar-1"></div>
+                                  </div>
+                                  <div className="mini-chart-bar-wrap">
+                                    <div className="mini-chart-bar bar-2"></div>
+                                  </div>
+                                  <div className="mini-chart-bar-wrap">
+                                    <div className="mini-chart-bar bar-3"></div>
+                                  </div>
+                                  <div className="mini-chart-bar-wrap">
+                                    <div className="mini-chart-bar bar-4"></div>
+                                  </div>
+                                </div>
+                                <div className="mini-db-stats">
+                                  <div className="mini-stat-num">+142%</div>
+                                  <div className="mini-stat-label">Cloud Efficacy</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {/* Screen glare overlay */}
+                        <div className="screen-reflection"></div>
+                      </div>
+                    </div>
+
+                    {/* Laptop Keyboard Base */}
+                    <div className="laptop-base"></div>
+
+                    {/* Laptop Shadow */}
+                    <div className="device-shadow laptop-shadow"></div>
+                  </div>
+
+                  {/* Mobile Device */}
+                  <div className="mobile-device float-mobile">
+                    <div className="mobile-phone">
+                      <div className="mobile-screen bg-slate-950">
+                        {/* Phone Notch */}
+                        <div className="mobile-notch"></div>
+
+                        {/* Mini Website Mobile Layout */}
+                        <div className="mini-web-mobile">
+                          <div className="mini-nav-mobile">
+                            <div className="mini-nav-logo-mobile">
+                              <span className="text-blue-500 font-bold">D</span>ivoAI
+                            </div>
+                            <div className="mini-hamburger-mobile">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                            </div>
+                          </div>
+
+                          <div className="mini-hero-mobile">
+                            <div className="mini-hero-tag-mobile">
+                              <span className="mini-tag-dot-mobile"></span> Next-Gen IT
+                            </div>
+                            <h3 className="mini-hero-title-mobile">
+                              Future-proof <br />
+                              <span className="mini-gradient-text font-black">IT Solutions</span>
+                            </h3>
+                            <p className="mini-hero-desc-mobile">
+                              We engineer performance, security & innovation.
+                            </p>
+                            <div className="mini-hero-ctas-mobile">
+                              <span className="mini-btn-primary-mobile">Start Project</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Screen glare overlay */}
+                        <div className="screen-reflection"></div>
+                      </div>
+                    </div>
+
+                    {/* Mobile Shadow */}
+                    <div className="device-shadow mobile-shadow"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
