@@ -239,8 +239,15 @@ body::-webkit-scrollbar-button {
 @media (max-width: 768px) {
 
   #navbar,
+  #services-navbar {
+    background: rgba(11, 15, 25, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: none !important;
+    animation: none !important;
+  }
+
   #navbar.scrolled,
-  #services-navbar,
   #services-navbar.scrolled {
     background: rgba(11, 15, 25, 0.95) !important;
     backdrop-filter: blur(20px) saturate(180%) !important;

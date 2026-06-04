@@ -581,12 +581,12 @@ function HomePage() {
                 >
                   Start Project <i className="fas fa-arrow-right text-xs"></i>
                 </a>
-                <a
-                  href="#services"
+                <Link
+                  to="/services"
                   className="btn-secondary-dark px-8 py-4 rounded-full font-semibold text-white flex items-center gap-2 hover:scale-[1.02] transition"
                 >
-                  <i className="fas fa-play text-xs text-blue-400"></i> Watch Demo
-                </a>
+                  <i className="fas fa-compass text-xs text-blue-400"></i> Explore
+                </Link>
               </div>
             </div>
 
@@ -636,7 +636,7 @@ function HomePage() {
                               </p>
                               <div className="mini-hero-ctas">
                                 <span className="mini-btn-primary">Start Project</span>
-                                <span className="mini-btn-secondary">Watch Demo</span>
+                                <span className="mini-btn-secondary">Explore</span>
                               </div>
                             </div>
 
