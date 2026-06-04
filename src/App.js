@@ -1557,8 +1557,8 @@ function HomePage() {
                   <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-envelope text-xs text-purple-400"></i>
                   </div>
-                  <a href="mailto:hello@divo.ai" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
-                    hello@divo.ai
+                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
+                    hello@divoai.com
                   </a>
                 </li>
                 {/* Phone */}

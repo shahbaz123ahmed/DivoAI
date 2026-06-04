@@ -335,8 +335,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h5 className="text-xs font-bold text-white uppercase tracking-wider">Email Inquiry</h5>
-                      <a href="mailto:hello@nexify.in" className="text-slate-400 text-xs mt-1 block hover:text-purple-400 transition-colors">
-                        hello@nexify.in
+                      <a href="mailto:hello@divoai.com" className="text-slate-400 text-xs mt-1 block hover:text-purple-400 transition-colors">
+                        hello@divoai.com
                       </a>
                     </div>
                   </div>
@@ -676,8 +676,8 @@ export default function ContactPage() {
                   <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-envelope text-xs text-purple-400" />
                   </div>
-                  <a href="mailto:hello@divo.ai" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
-                    hello@divo.ai
+                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
+                    hello@divoai.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
