@@ -552,7 +552,7 @@ function HomePage() {
         {/* Designed Image Container */}
         <div className="w-full h-full flex items-center justify-center z-10 mt-[72px] lg:mt-0">
           <img
-            src="/images/herosection.jpg"
+            src="/images/herosection.png"
             alt="DivoAI Brand Hero"
             className="w-full h-full min-h-[60vh] md:min-h-[80vh] lg:min-h-screen object-cover select-none pointer-events-none"
           />
