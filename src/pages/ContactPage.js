@@ -180,22 +180,22 @@ export default function ContactPage() {
                   <stop offset="100%" stopColor="#8B5CF6" />
                 </linearGradient>
               </defs>
-              <path 
-                d="M26 80 L50 28 L74 80" 
-                stroke="url(#divoai-logo-grad-con)" 
-                strokeWidth="15" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
+              <path
+                d="M26 80 L50 28 L74 80"
+                stroke="url(#divoai-logo-grad-con)"
+                strokeWidth="15"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <circle cx="50" cy="74" r="8" fill="url(#divoai-logo-grad-con)" />
             </svg>
-            
+
             {/* Brand Name */}
             <div className="logo-text text-2xl font-extrabold tracking-tight transition group-hover:opacity-90 flex items-center text-white">
               <span>Divo</span>
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
             </div>
-            
+
             {/* Divider and Subtitle */}
             <div className="w-1.5 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full group-hover:scale-y-110 transition duration-300" />
             <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase hidden sm:inline">IT Solutions</span>
@@ -574,12 +574,12 @@ export default function ContactPage() {
                         <stop offset="100%" stopColor="#8B5CF6" />
                       </linearGradient>
                     </defs>
-                    <path 
-                      d="M26 80 L50 28 L74 80" 
-                      stroke="url(#divoai-con-footer-gradient)" 
-                      strokeWidth="15" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
+                    <path
+                      d="M26 80 L50 28 L74 80"
+                      stroke="url(#divoai-con-footer-gradient)"
+                      strokeWidth="15"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <circle cx="50" cy="74" r="8" fill="url(#divoai-con-footer-gradient)" />
                   </svg>
@@ -676,8 +676,8 @@ export default function ContactPage() {
                   <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
                     <i className="fas fa-envelope text-xs text-purple-400" />
                   </div>
-                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
-                    hello@divoai.com
+                  <a href="mailto:hello@divo.ai" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
+                    hello@divo.ai
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
