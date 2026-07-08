@@ -6,6 +6,76 @@ import InsightsPage from "./pages/InsightsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
+const headlines = [
+  "Build the Future with Cloud & AI",
+  "Powering Ideas with Cloud & Code",
+  "Where Innovation Meets Infrastructure",
+  "Engineering Scalable Digital Experiences",
+  "Modern Cloud. Smarter Code.",
+];
+
+const whoWeAreSlides = [
+  {
+    src: "/wer/slide1.jpg",
+    title: "Enterprise Solutions",
+    subtitle: "Architecting secure, cloud-native infrastructures at scale",
+    type: "fade-zoom",
+  },
+  {
+    src: "/wer/slide2.jpg",
+    title: "AI-Driven Innovation",
+    subtitle: "Intelligent workflow automations and context-aware agents",
+    type: "slide-horizontal",
+  },
+  {
+    src: "/wer/slide3.jpg",
+    title: "Next-Gen Platforms",
+    subtitle: "High-performance Web & SaaS solutions built for efficiency",
+    type: "slide-vertical",
+  },
+  {
+    src: "/wer/slide4.jpg",
+    title: "Modern Tech Stacks",
+    subtitle: "Bleeding-edge tools and frameworks tailored for scalability",
+    type: "wipe-diagonal",
+  },
+  {
+    src: "/wer/slide5.jpg",
+    title: "Collaborative Design",
+    subtitle: "Intuitive, gorgeous, and interactive user experiences",
+    type: "blur-fade",
+  },
+  {
+    src: "/wer/slide6.jpg",
+    title: "Mission-Critical Ops",
+    subtitle: "24/7 proactive monitoring and system telemetry",
+    type: "fade-zoom",
+  },
+];
+
+const chooseUsSlides = [
+  {
+    src: "/dashboard/slide7.jpg",
+    title: "Infrastructure Metrics",
+    type: "fade-zoom",
+  },
+  {
+    src: "/dashboard/slide8.jpg",
+    title: "Node Overview",
+    type: "slide-horizontal",
+  },
+  {
+    src: "/dashboard/slide9.jpg",
+    title: "Security Insights",
+    type: "slide-vertical",
+  },
+  {
+    src: "/dashboard/slide10.jpg",
+    title: "Resource Allocation",
+    type: "wipe-diagonal",
+  },
+];
+
 function HomePage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileMenuClickCount, setMobileMenuClickCount] = useState(0);
@@ -34,11 +104,10 @@ function HomePage() {
         setVisibleMessages((prev) => [...prev, { id: messageId, text: "" }]);
 
         // Type character by character, handling emojis properly
-        let currentText = "";
         const characters = Array.from(messageText);
 
         for (let i = 0; i < characters.length; i++) {
-          currentText += characters[i];
+          const currentText = characters.slice(0, i + 1).join("");
           setVisibleMessages((prev) =>
             prev.map((m) =>
               m.id === messageId ? { ...m, text: currentText } : m,
@@ -142,13 +211,6 @@ function HomePage() {
     }
   };
 
-  const headlines = [
-    "Build the Future with Cloud & AI",
-    "Powering Ideas with Cloud & Code",
-    "Where Innovation Meets Infrastructure",
-    "Engineering Scalable Digital Experiences",
-    "Modern Cloud. Smarter Code.",
-  ];
   const [headlineIdx, setHeadlineIdx] = useState(0);
   const [headlineStatus, setHeadlineStatus] = useState("active");
 
@@ -170,45 +232,6 @@ function HomePage() {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
-  // Slideshow for Who We Are section
-  const whoWeAreSlides = [
-    {
-      src: "/wer/slide1.jpg",
-      title: "Enterprise Solutions",
-      subtitle: "Architecting secure, cloud-native infrastructures at scale",
-      type: "fade-zoom",
-    },
-    {
-      src: "/wer/slide2.jpg",
-      title: "AI-Driven Innovation",
-      subtitle: "Intelligent workflow automations and context-aware agents",
-      type: "slide-horizontal",
-    },
-    {
-      src: "/wer/slide3.jpg",
-      title: "Next-Gen Platforms",
-      subtitle: "High-performance Web & SaaS solutions built for efficiency",
-      type: "slide-vertical",
-    },
-    {
-      src: "/wer/slide4.jpg",
-      title: "Modern Tech Stacks",
-      subtitle: "Bleeding-edge tools and frameworks tailored for scalability",
-      type: "wipe-diagonal",
-    },
-    {
-      src: "/wer/slide5.jpg",
-      title: "Collaborative Design",
-      subtitle: "Intuitive, gorgeous, and interactive user experiences",
-      type: "blur-fade",
-    },
-    {
-      src: "/wer/slide6.jpg",
-      title: "Mission-Critical Ops",
-      subtitle: "24/7 proactive monitoring and system telemetry",
-      type: "fade-zoom",
-    },
-  ];
   const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(5);
 
@@ -220,29 +243,6 @@ function HomePage() {
     return () => clearInterval(timer);
   }, [activeSlide]);
 
-  // Slideshow for Why Nexify (Features) section
-  const chooseUsSlides = [
-    {
-      src: "/dashboard/slide7.jpg",
-      title: "Infrastructure Metrics",
-      type: "fade-zoom",
-    },
-    {
-      src: "/dashboard/slide8.jpg",
-      title: "Node Overview",
-      type: "slide-horizontal",
-    },
-    {
-      src: "/dashboard/slide9.jpg",
-      title: "Security Insights",
-      type: "slide-vertical",
-    },
-    {
-      src: "/dashboard/slide10.jpg",
-      title: "Resource Allocation",
-      type: "wipe-diagonal",
-    },
-  ];
   const [activeChooseUs, setActiveChooseUs] = useState(0);
   const [prevChooseUs, setPrevChooseUs] = useState(3);
 
