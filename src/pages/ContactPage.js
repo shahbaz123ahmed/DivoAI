@@ -168,37 +168,11 @@ export default function ContactPage() {
       {/* ── NAVBAR ── */}
       <nav
         id="services-navbar"
-        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/5"
+        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent"
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2 cursor-pointer group">
-            {/* SVG Logo Icon */}
-            <svg viewBox="0 0 100 100" className="w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="divoai-logo-grad-con" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#3B82F6" />
-                  <stop offset="100%" stopColor="#8B5CF6" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M26 80 L50 28 L74 80"
-                stroke="url(#divoai-logo-grad-con)"
-                strokeWidth="15"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <circle cx="50" cy="74" r="8" fill="url(#divoai-logo-grad-con)" />
-            </svg>
-
-            {/* Brand Name */}
-            <div className="logo-text text-2xl font-extrabold tracking-tight transition group-hover:opacity-90 flex items-center text-white">
-              <span>Divo</span>
-              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
-            </div>
-
-            {/* Divider and Subtitle */}
-            <div className="w-1.5 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full group-hover:scale-y-110 transition duration-300" />
-            <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase hidden sm:inline">IT Solutions</span>
+                        <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 scale-[2.5] md:scale-[3] origin-left group-hover:scale-[2.6] md:group-hover:scale-[3.1]" />
           </Link>
 
           <div className="hidden md:flex space-x-8 text-slate-300 font-medium">
@@ -206,12 +180,12 @@ export default function ContactPage() {
             <Link to="/services" className="nav-link hover:text-white transition">Services</Link>
             <Link to="/insights" className="nav-link hover:text-white transition">Insights</Link>
             <Link to="/about" className="nav-link hover:text-white transition">About</Link>
-            <Link to="/contact" className="nav-link text-blue-400 hover:text-white transition">Contact</Link>
+            <Link to="/contact" className="nav-link text-[#D90429] hover:text-white transition">Contact</Link>
           </div>
 
           <Link
             to="/contact"
-            className="hidden md:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-500/20 transition-all hover:scale-[1.03]"
+            className="hidden md:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-semibold text-sm hover:shadow-lg hover:shadow-[#D90429]/20 transition-all hover:scale-[1.03]"
           >
             Get Started
           </Link>
@@ -253,15 +227,14 @@ export default function ContactPage() {
             <span>About</span>
             <i className="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200"></i>
           </Link>
-          <Link to="/contact" className="mobile-menu-link group text-blue-400 font-semibold">
+          <Link to="/contact" className="mobile-menu-link group text-[#D90429] font-semibold">
             <span>Contact</span>
             <i className="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200"></i>
           </Link>
           <div className="mobile-menu-cta pt-2">
             <Link
               to="/contact"
-              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-center text-sm shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 transition duration-300"
-            >
+              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-bold text-center text-sm shadow-lg shadow-[#D90429]/10 hover:shadow-[#D90429]/25 transition duration-300"            >
               Get Started
             </Link>
           </div>
@@ -271,14 +244,14 @@ export default function ContactPage() {
       {/* ── HERO HEADER ── */}
       <section className="relative pt-44 pb-14 overflow-hidden">
         {/* Glow Elements */}
-        <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[130px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#D90429]/10 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[450px] h-[450px] bg-[#FF1744]/10 rounded-full blur-[120px] pointer-events-none" />
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]" />
 
         <div className="container mx-auto px-6 relative z-10 text-center max-w-3xl">
           <span
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold tracking-wide mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D90429]/10 border border-[#D90429]/20 text-red-300 text-xs font-semibold tracking-wide mb-6"
             data-aos="fade-down"
           >
             <i className="fas fa-headset animate-pulse"></i> DivoAI Support Portal
@@ -319,7 +292,7 @@ export default function ContactPage() {
                 <div className="space-y-4 pt-2">
                   {/* Address */}
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center flex-shrink-0 text-blue-400">
+                    <div className="w-10 h-10 rounded-xl bg-[#D90429]/10 border border-[#D90429]/25 flex items-center justify-center flex-shrink-0 text-[#D90429]">
                       <i className="fas fa-map-location-dot text-sm" />
                     </div>
                     <div>
@@ -330,12 +303,12 @@ export default function ContactPage() {
 
                   {/* Email */}
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/25 flex items-center justify-center flex-shrink-0 text-purple-400">
+                    <div className="w-10 h-10 rounded-xl bg-[#D90429]/10 border border-[#D90429]/25 flex items-center justify-center flex-shrink-0 text-[#D90429]">
                       <i className="fas fa-envelope text-sm" />
                     </div>
                     <div>
                       <h5 className="text-xs font-bold text-white uppercase tracking-wider">Email Inquiry</h5>
-                      <a href="mailto:hello@divoai.com" className="text-slate-400 text-xs mt-1 block hover:text-purple-400 transition-colors">
+                      <a href="mailto:hello@divoai.com" className="text-slate-400 text-xs mt-1 block hover:text-[#D90429] transition-colors">
                         hello@divoai.com
                       </a>
                     </div>
@@ -343,12 +316,12 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/25 flex items-center justify-center flex-shrink-0 text-cyan-400">
+                    <div className="w-10 h-10 rounded-xl bg-[#D90429]/10 border border-[#D90429]/25 flex items-center justify-center flex-shrink-0 text-[#D90429]">
                       <i className="fas fa-phone-volume text-sm" />
                     </div>
                     <div>
                       <h5 className="text-xs font-bold text-white uppercase tracking-wider">Phone Call</h5>
-                      <a href="tel:+917260912860" className="text-slate-400 text-xs mt-1 block hover:text-cyan-400 transition-colors">
+                      <a href="tel:+917260912860" className="text-slate-400 text-xs mt-1 block hover:text-[#D90429] transition-colors">
                         +91 72609 12860
                       </a>
                     </div>
@@ -365,7 +338,7 @@ export default function ContactPage() {
                         href={`https://${s}.com`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/40 hover:bg-blue-500/10 transition-all duration-200"
+                        className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200"
                       >
                         <i className={`fab fa-${s} text-sm`} />
                       </a>
@@ -387,7 +360,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="contact-trust-badge p-5 rounded-2xl flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#D90429]/10 text-[#D90429] flex items-center justify-center text-lg flex-shrink-0">
                     <i className="fas fa-shield" />
                   </div>
                   <div>
@@ -557,7 +530,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="con-footer bg-[#07090e] text-slate-400 relative z-10 pt-16 pb-8 border-t border-white/5">
+      <footer className="con-footer bg-[#0A0A0A] text-slate-400 relative z-10 pt-16 pb-8 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-6xl">
           {/* Main Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
@@ -565,32 +538,7 @@ export default function ContactPage() {
             {/* Col 1 — Brand */}
             <div className="space-y-5 con-footer-col-1 text-left">
               <div>
-                <div className="flex items-center gap-2 mb-1">
-                  {/* SVG Logo Icon */}
-                  <svg viewBox="0 0 100 100" className="w-6 h-6 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <linearGradient id="divoai-con-footer-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#3B82F6" />
-                        <stop offset="100%" stopColor="#8B5CF6" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M26 80 L50 28 L74 80"
-                      stroke="url(#divoai-con-footer-gradient)"
-                      strokeWidth="15"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="50" cy="74" r="8" fill="url(#divoai-con-footer-gradient)" />
-                  </svg>
-                  {/* Brand Text */}
-                  <div className="text-2xl font-black transition flex items-center text-white tracking-tight">
-                    <span>Divo</span>
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
-                  </div>
-                  <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full" />
-                </div>
-                <span className="text-[10px] font-semibold tracking-widest text-slate-500 uppercase">IT Solutions</span>
+                                  <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain mb-2 scale-[2.5] md:scale-[3] origin-left" />
               </div>
               <p className="text-sm leading-relaxed text-slate-500">
                 DivoAI IT Solutions delivers modern websites, powerful software tools, and intelligent IT systems tailored for today’s businesses. Every solution we create is designed to be fast, secure, scalable, and user-focused.
@@ -603,7 +551,7 @@ export default function ContactPage() {
                     href={`https://${s}.com`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/40 hover:bg-blue-500/10 transition-all duration-200"
+                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200"
                   >
                     <i className={`fab fa-${s} text-sm`} />
                   </a>
@@ -614,7 +562,7 @@ export default function ContactPage() {
             {/* Col 2 — Quick Links */}
             <div className="con-footer-col-2 text-left">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full" />
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Quick Links</h5>
               </div>
               <ul className="space-y-3.5">
@@ -626,8 +574,8 @@ export default function ContactPage() {
                   { label: 'Contact Us', to: '/contact' },
                 ].map(({ label, to }) => (
                   <li key={label}>
-                    <Link to={to} className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
+                    <Link to={to} className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group">
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
                       <span>{label}</span>
                     </Link>
                   </li>
@@ -638,7 +586,7 @@ export default function ContactPage() {
             {/* Col 3 — Our Services */}
             <div className="con-footer-col-3 text-left">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full" />
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Our Services</h5>
               </div>
               <ul className="space-y-3.5">
@@ -650,8 +598,8 @@ export default function ContactPage() {
                   { label: 'IT Support', id: 'it-infrastructure' }
                 ].map(({ label, id }) => (
                   <li key={label}>
-                    <Link to={`/services#${id}`} className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
+                    <Link to={`/services#${id}`} className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group">
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
                       <span>{label}</span>
                     </Link>
                   </li>
@@ -662,29 +610,29 @@ export default function ContactPage() {
             {/* Col 4 — Contact Us */}
             <div className="con-footer-col-4 text-left">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full" />
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Contact Us</h5>
               </div>
               <ul className="space-y-3.5">
                 <li className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i className="fas fa-map-marker-alt text-xs text-blue-400" />
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/10 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i className="fas fa-map-marker-alt text-xs text-[#D90429]" />
                   </div>
                   <p className="text-sm text-slate-400 leading-relaxed">Bengaluru, India</p>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-envelope text-xs text-purple-400" />
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/10 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-envelope text-xs text-[#D90429]" />
                   </div>
-                  <a href="mailto:hello@divo.ai" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
-                    hello@divo.ai
+                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200">
+                    hello@divoai.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-phone-alt text-xs text-blue-400" />
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/10 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-phone-alt text-xs text-[#D90429]" />
                   </div>
-                  <a href="tel:+917260912860" className="text-sm text-slate-400 hover:text-blue-400 transition-colors duration-200">
+                  <a href="tel:+917260912860" className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200">
                     +91 72609 12860
                   </a>
                 </li>
@@ -696,8 +644,8 @@ export default function ContactPage() {
           <div className="con-footer-bottom-bar border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
             <p>© 2026 <span className="text-slate-200 font-semibold">DivoAI IT Solutions</span> — Building Digital Products That Scale. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Privacy Policy</a>
+              <a href="#" className="text-slate-400 hover:text-[#D90429] transition-colors duration-200">Terms of Service</a>
+              <a href="#" className="text-slate-400 hover:text-[#D90429] transition-colors duration-200">Privacy Policy</a>
               <span className="text-slate-500">ISO 27001 Certified</span>
             </div>
           </div>

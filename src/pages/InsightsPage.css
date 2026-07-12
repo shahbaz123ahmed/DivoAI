@@ -13,10 +13,10 @@
 }
 
 .category-pill.active {
-  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%) !important;
+  background: linear-gradient(135deg, #D90429 0%, #FF1744 100%) !important;
   color: white !important;
   border-color: transparent !important;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.35);
 }
 
 /* Premium Article Card Hover Effects */

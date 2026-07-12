@@ -5,6 +5,7 @@ import ServicesPage from "./pages/ServicesPage";
 import InsightsPage from "./pages/InsightsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import ParticleNetwork from "./components/ParticleNetwork";
 
 const headlines = [
   "Build the Future with Cloud & AI",
@@ -446,57 +447,16 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen text-slate-100 bg-[#0B0F19] overflow-hidden">
+    <div className="min-h-screen text-slate-100 bg-[#111111] overflow-hidden">
       {/* NAVBAR */}
       <nav
-        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/5"
+        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent"
         id="navbar"
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-2 cursor-pointer group">
-            {/* SVG Logo Icon */}
-            <svg
-              viewBox="0 0 100 100"
-              className="w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient
-                  id="divoai-logo-gradient"
-                  x1="0%"
-                  y1="100%"
-                  x2="100%"
-                  y2="0%"
-                >
-                  <stop offset="0%" stopColor="#3B82F6" />
-                  <stop offset="100%" stopColor="#8B5CF6" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M26 80 L50 28 L74 80"
-                stroke="url(#divoai-logo-gradient)"
-                strokeWidth="15"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <circle cx="50" cy="74" r="8" fill="url(#divoai-logo-gradient)" />
-            </svg>
-
-            {/* Brand Name */}
-            <div className="logo-text text-2xl font-extrabold tracking-tight transition group-hover:opacity-90 flex items-center text-white">
-              <span>Divo</span>
-              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">
-                AI
-              </span>
-            </div>
-
-            {/* Divider and Subtitle */}
-            <div className="w-1.5 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full group-hover:scale-y-110 transition duration-300"></div>
-            <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase hidden sm:inline">
-              IT Solutions
-            </span>
+            <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 scale-[2.5] md:scale-[3] origin-left group-hover:scale-[2.6] md:group-hover:scale-[3.1]" />
           </div>
 
           {/* Desktop Menu */}
@@ -531,7 +491,7 @@ function HomePage() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               to="/contact"
-              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-500/20 transition-all hover:scale-[1.03]"
+              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-semibold text-sm hover:shadow-lg hover:shadow-[#D90429]/20 transition-all hover:scale-[1.03]"
             >
               Get Started
             </Link>
@@ -612,7 +572,7 @@ function HomePage() {
           <div className="mobile-menu-cta pt-2">
             <Link
               to="/contact"
-              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-center text-sm shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 transition duration-300"
+              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-bold text-center text-sm shadow-lg shadow-[#D90429]/10 hover:shadow-[#D90429]/25 transition duration-300"
             >
               Get Started
             </Link>
@@ -623,28 +583,33 @@ function HomePage() {
       {/* HERO SECTION (Dark Theme) */}
       <section
         id="home"
-        className="relative pt-32 pb-24 md:pt-40 md:pb-36 flex items-center overflow-hidden"
+        className="relative pt-20 pb-24 md:pt-24 md:pb-36 flex items-center overflow-hidden"
       >
         {/* Glow Effects */}
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px] pulse-glow"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[120px] pulse-glow delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-[#D90429]/15 rounded-full blur-[100px] pulse-glow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#FF1744]/10 rounded-full blur-[120px] pulse-glow delay-1000"></div>
 
         {/* Grid Background Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] z-0"></div>
+
+        {/* Fullscreen Interactive Particle Network */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <ParticleNetwork />
+        </div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
             {/* Left Column Text */}
-            <div className="lg:col-span-6 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-semibold tracking-wide">
+            <div className="lg:col-span-7 space-y-6 text-left self-start pointer-events-none">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D90429]/10 border border-[#D90429]/20 text-red-300 text-xs font-semibold tracking-wide pointer-events-auto">
                 <span className="flex h-2 w-2 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D90429] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D90429]"></span>
                 </span>
                 Next-Gen Enterprise IT Powerhouse
               </div>
 
-              <h1 className="hero-animate-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white">
+              <h1 className="hero-animate-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white pointer-events-auto">
                 Future-proof <br className="hidden sm:inline" />
                 <span className="gradient-text font-black">
                   IT Solutions
@@ -653,13 +618,13 @@ function HomePage() {
                 for digital leaders
               </h1>
 
-              <p className="hero-animate-text text-slate-300 text-lg md:text-xl max-w-xl leading-relaxed">
+              <p className="hero-animate-text text-slate-300 text-lg md:text-xl max-w-xl leading-relaxed pointer-events-auto">
                 We engineer performance, security & innovation — transforming
                 operations with elite DevOps pipelines, secure cloud
                 infrastructure, and AI-native products.
               </p>
 
-              <div className="hero-animate-ctas flex flex-wrap gap-4 pt-4">
+              <div className="hero-animate-ctas flex flex-wrap gap-4 pt-4 pointer-events-auto">
                 <a
                   href="#contact"
                   className="btn-primary px-8 py-4 rounded-full font-bold text-white flex items-center gap-2 hover:scale-[1.02] transition"
@@ -670,168 +635,14 @@ function HomePage() {
                   to="/services"
                   className="btn-secondary-dark px-8 py-4 rounded-full font-semibold text-white flex items-center gap-2 hover:scale-[1.02] transition"
                 >
-                  <i className="fas fa-compass text-xs text-blue-400"></i>{" "}
+                  <i className="fas fa-compass text-xs text-[#D90429]"></i>{" "}
                   Explore
                 </Link>
               </div>
             </div>
 
-            {/* Right Column Visual Mockup */}
-            <div className="lg:col-span-6 relative flex justify-center lg:justify-end hero-animate-visual">
-              <div className="hero-mockup-container">
-                {/* Glow Orbs */}
-                <div className="hero-glow-orb hero-glow-orb-blue"></div>
-                <div className="hero-glow-orb hero-glow-orb-purple"></div>
-
-                {/* Light Streaks */}
-                <div className="light-streak light-streak-1"></div>
-                <div className="light-streak light-streak-2"></div>
-
-                <div className="device-stage">
-                  {/* Laptop Device */}
-                  <div className="laptop-device float-laptop">
-                    {/* Laptop Screen Lid */}
-                    <div className="laptop-lid">
-                      <div className="laptop-screen bg-slate-950">
-                        {/* Mini Website */}
-                        <div className="mini-web">
-                          <div className="mini-nav">
-                            <div className="mini-nav-logo">
-                              <span className="text-blue-500 font-bold">D</span>
-                              ivoAI
-                            </div>
-                            <div className="mini-nav-links">
-                              <span>Services</span>
-                              <span>Insights</span>
-                              <span>About</span>
-                            </div>
-                            <span className="mini-nav-cta">Get Started</span>
-                          </div>
-
-                          <div className="mini-hero-grid">
-                            <div className="mini-hero-left">
-                              <div className="mini-hero-tag">
-                                <span className="mini-tag-dot"></span> Next-Gen
-                                IT Powerhouse
-                              </div>
-                              <h3 className="mini-hero-title">
-                                Future-proof <br />
-                                <span className="mini-gradient-text font-black">
-                                  IT Solutions
-                                </span>{" "}
-                                <br />
-                                for digital leaders
-                              </h3>
-                              <p className="mini-hero-desc">
-                                We engineer performance, security & innovation —
-                                transforming operations.
-                              </p>
-                              <div className="mini-hero-ctas">
-                                <span className="mini-btn-primary">
-                                  Start Project
-                                </span>
-                                <span className="mini-btn-secondary">
-                                  Explore
-                                </span>
-                              </div>
-                            </div>
-
-                            <div className="mini-hero-right">
-                              <div className="mini-dashboard-card">
-                                <div className="mini-db-header">
-                                  <span className="mini-db-dot red"></span>
-                                  <span className="mini-db-dot yellow"></span>
-                                  <span className="mini-db-dot green"></span>
-                                </div>
-                                <div className="mini-db-chart">
-                                  <div className="mini-chart-bar-wrap">
-                                    <div className="mini-chart-bar bar-1"></div>
-                                  </div>
-                                  <div className="mini-chart-bar-wrap">
-                                    <div className="mini-chart-bar bar-2"></div>
-                                  </div>
-                                  <div className="mini-chart-bar-wrap">
-                                    <div className="mini-chart-bar bar-3"></div>
-                                  </div>
-                                  <div className="mini-chart-bar-wrap">
-                                    <div className="mini-chart-bar bar-4"></div>
-                                  </div>
-                                </div>
-                                <div className="mini-db-stats">
-                                  <div className="mini-stat-num">+142%</div>
-                                  <div className="mini-stat-label">
-                                    Cloud Efficacy
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        {/* Screen glare overlay */}
-                        <div className="screen-reflection"></div>
-                      </div>
-                    </div>
-
-                    {/* Laptop Keyboard Base */}
-                    <div className="laptop-base"></div>
-
-                    {/* Laptop Shadow */}
-                    <div className="device-shadow laptop-shadow"></div>
-                  </div>
-
-                  {/* Mobile Device */}
-                  <div className="mobile-device float-mobile">
-                    <div className="mobile-phone">
-                      <div className="mobile-screen bg-slate-950">
-                        {/* Phone Notch */}
-                        <div className="mobile-notch"></div>
-
-                        {/* Mini Website Mobile Layout */}
-                        <div className="mini-web-mobile">
-                          <div className="mini-nav-mobile">
-                            <div className="mini-nav-logo-mobile">
-                              <span className="text-blue-500 font-bold">D</span>
-                              ivoAI
-                            </div>
-                            <div className="mini-hamburger-mobile">
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                          </div>
-
-                          <div className="mini-hero-mobile">
-                            <div className="mini-hero-tag-mobile">
-                              <span className="mini-tag-dot-mobile"></span>{" "}
-                              Next-Gen IT
-                            </div>
-                            <h3 className="mini-hero-title-mobile">
-                              Future-proof <br />
-                              <span className="mini-gradient-text font-black">
-                                IT Solutions
-                              </span>
-                            </h3>
-                            <p className="mini-hero-desc-mobile">
-                              We engineer performance, security & innovation.
-                            </p>
-                            <div className="mini-hero-ctas-mobile">
-                              <span className="mini-btn-primary-mobile">
-                                Start Project
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Screen glare overlay */}
-                        <div className="screen-reflection"></div>
-                      </div>
-                    </div>
-
-                    {/* Mobile Shadow */}
-                    <div className="device-shadow mobile-shadow"></div>
-                  </div>
-                </div>
-              </div>
+            {/* Right Column Empty for Particle Space */}
+            <div className="hidden lg:block lg:col-span-5 pointer-events-none">
             </div>
           </div>
         </div>
@@ -840,10 +651,10 @@ function HomePage() {
       {/* CORE SERVICES SECTION (Light Theme) */}
       <section
         id="services"
-        className="py-28 bg-[#F8FAFC] text-slate-900 relative"
+        className="py-28 bg-[#F8F9FB] text-slate-900 relative"
       >
         {/* Soft shadow transition from dark to light */}
-        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#0B0F19] to-transparent pointer-events-none opacity-10"></div>
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#111111] to-transparent pointer-events-none opacity-10"></div>
 
         <div className="container mx-auto px-6">
           {/* Header */}
@@ -851,12 +662,12 @@ function HomePage() {
             className="text-center max-w-2xl mx-auto mb-20"
             data-aos="fade-up"
           >
-            <span className="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#D90429] bg-red-50 px-3.5 py-1.5 rounded-full inline-block">
               Core Expertise
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold mt-4 tracking-tight text-slate-900">
               Future-proof digital <br />
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent">
                 IT Services
               </span>
             </h2>
@@ -875,7 +686,7 @@ function HomePage() {
               data-aos-delay="100"
             >
               <div>
-                <div className="service-icon-container h-14 w-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 text-2xl mb-6">
+                <div className="service-icon-container h-14 w-14 rounded-2xl bg-red-50 flex items-center justify-center text-[#D90429] text-2xl mb-6">
                   <i className="fas fa-laptop-code"></i>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -887,7 +698,7 @@ function HomePage() {
                   premium brand presence.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-blue-600 font-semibold group cursor-pointer text-sm">
+              <div className="mt-8 flex items-center text-[#D90429] font-semibold group cursor-pointer text-sm">
                 Explore{" "}
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1.5 transition"></i>
               </div>
@@ -900,7 +711,7 @@ function HomePage() {
               data-aos-delay="200"
             >
               <div>
-                <div className="service-icon-container h-14 w-14 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 text-2xl mb-6">
+                <div className="service-icon-container h-14 w-14 rounded-2xl bg-red-50 flex items-center justify-center text-[#D90429] text-2xl mb-6">
                   <i className="fas fa-code"></i>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -912,7 +723,7 @@ function HomePage() {
                   and scale alongside your business.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-purple-600 font-semibold group cursor-pointer text-sm">
+              <div className="mt-8 flex items-center text-[#D90429] font-semibold group cursor-pointer text-sm">
                 Explore{" "}
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1.5 transition"></i>
               </div>
@@ -925,7 +736,7 @@ function HomePage() {
               data-aos-delay="300"
             >
               <div>
-                <div className="service-icon-container h-14 w-14 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600 text-2xl mb-6">
+                <div className="service-icon-container h-14 w-14 rounded-2xl bg-red-50 flex items-center justify-center text-[#D90429] text-2xl mb-6">
                   <i className="fas fa-rocket"></i>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -937,7 +748,7 @@ function HomePage() {
                   robust API frameworks.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-cyan-600 font-semibold group cursor-pointer text-sm">
+              <div className="mt-8 flex items-center text-[#D90429] font-semibold group cursor-pointer text-sm">
                 Explore{" "}
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1.5 transition"></i>
               </div>
@@ -950,7 +761,7 @@ function HomePage() {
               data-aos-delay="150"
             >
               <div>
-                <div className="service-icon-container h-14 w-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600 text-2xl mb-6">
+                <div className="service-icon-container h-14 w-14 rounded-2xl bg-red-50 flex items-center justify-center text-[#D90429] text-2xl mb-6">
                   <i className="fas fa-bezier-curve"></i>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -962,7 +773,7 @@ function HomePage() {
                   highly intuitive, and memorable journeys.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-indigo-600 font-semibold group cursor-pointer text-sm">
+              <div className="mt-8 flex items-center text-[#D90429] font-semibold group cursor-pointer text-sm">
                 Explore{" "}
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1.5 transition"></i>
               </div>
@@ -975,7 +786,7 @@ function HomePage() {
               data-aos-delay="250"
             >
               <div>
-                <div className="service-icon-container h-14 w-14 rounded-2xl bg-pink-50 flex items-center justify-center text-pink-600 text-2xl mb-6">
+                <div className="service-icon-container h-14 w-14 rounded-2xl bg-red-50 flex items-center justify-center text-[#D90429] text-2xl mb-6">
                   <i className="fas fa-cogs"></i>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -987,7 +798,7 @@ function HomePage() {
                   labor daily.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-pink-600 font-semibold group cursor-pointer text-sm">
+              <div className="mt-8 flex items-center text-[#D90429] font-semibold group cursor-pointer text-sm">
                 Explore{" "}
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1.5 transition"></i>
               </div>
@@ -1000,7 +811,7 @@ function HomePage() {
               data-aos-delay="350"
             >
               <div>
-                <div className="service-icon-container h-14 w-14 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-2xl mb-6">
+                <div className="service-icon-container h-14 w-14 rounded-2xl bg-red-50 flex items-center justify-center text-[#D90429] text-2xl mb-6">
                   <i className="fas fa-headset"></i>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
@@ -1012,7 +823,7 @@ function HomePage() {
                   your operations run flawlessly.
                 </p>
               </div>
-              <div className="mt-8 flex items-center text-emerald-600 font-semibold group cursor-pointer text-sm">
+              <div className="mt-8 flex items-center text-[#D90429] font-semibold group cursor-pointer text-sm">
                 Explore{" "}
                 <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1.5 transition"></i>
               </div>
@@ -1031,9 +842,9 @@ function HomePage() {
             {/* Left Column Content */}
             <div className="lg:col-span-6 space-y-8" data-aos="fade-right">
               <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3.5 py-1.5 rounded-full inline-block mb-4">
-                  Why DivoAI
-                </span>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#D90429] bg-[#D90429]/10 px-3.5 py-1.5 rounded-full inline-block">
+              The DivoAI Advantage
+            </span>
                 <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
                   Build Smart. Scale Fast.
                 </h2>
@@ -1047,7 +858,7 @@ function HomePage() {
               {/* Trust Checkmarks */}
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-red-50 flex items-center justify-center text-[#D90429] flex-shrink-0">
                     <i className="fas fa-check text-xs"></i>
                   </div>
                   <div>
@@ -1062,7 +873,7 @@ function HomePage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-red-50 flex items-center justify-center text-[#D90429] flex-shrink-0">
                     <i className="fas fa-check text-xs"></i>
                   </div>
                   <div>
@@ -1077,7 +888,7 @@ function HomePage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0">
+                  <div className="mt-1 h-6 w-6 rounded-full bg-red-50 flex items-center justify-center text-[#D90429] flex-shrink-0">
                     <i className="fas fa-check text-xs"></i>
                   </div>
                   <div>
@@ -1095,17 +906,17 @@ function HomePage() {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="stat-card-light p-6">
-                  <div className="text-4xl font-extrabold text-blue-600">
-                    99.9%
-                  </div>
+                  <div className="text-4xl font-extrabold text-[#D90429] mb-1">
+                99.9%
+              </div>
                   <div className="text-sm font-semibold text-slate-700 mt-2">
                     Network Uptime Guarantee
                   </div>
                 </div>
                 <div className="stat-card-light p-6">
-                  <div className="text-4xl font-extrabold text-purple-600">
-                    24/7
-                  </div>
+                  <div className="text-4xl font-extrabold text-[#D90429] mb-1">
+                250+
+              </div>
                   <div className="text-sm font-semibold text-slate-700 mt-2">
                     Enterprise Customer Support
                   </div>
@@ -1192,7 +1003,7 @@ function HomePage() {
             className="text-center max-w-2xl mx-auto mb-16"
             data-aos="fade-up"
           >
-            <span className="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#D90429] bg-[#D90429]/10 px-3.5 py-1.5 rounded-full inline-block">
               Success Stories
             </span>
             <h2 className="text-4xl font-extrabold mt-4 text-slate-900 tracking-tight">
@@ -1223,7 +1034,7 @@ function HomePage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-3 pt-6 border-t border-slate-100">
-                  <div className="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
+                  <div className="h-10 w-10 rounded-full bg-red-100 text-[#D90429] flex items-center justify-center font-bold text-sm">
                     SC
                   </div>
                   <div>
@@ -1256,7 +1067,7 @@ function HomePage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-3 pt-6 border-t border-slate-100">
-                  <div className="h-10 w-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-sm">
+                  <div className="h-10 w-10 rounded-full bg-red-100 text-[#D90429] flex items-center justify-center font-bold text-sm">
                     MR
                   </div>
                   <div>
@@ -1289,7 +1100,7 @@ function HomePage() {
                   </p>
                 </div>
                 <div className="flex items-center gap-3 pt-6 border-t border-slate-100">
-                  <div className="h-10 w-10 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold text-sm">
+                  <div className="h-10 w-10 rounded-full bg-red-100 text-[#D90429] flex items-center justify-center font-bold text-sm">
                     MR
                   </div>
                   <div>
@@ -1319,12 +1130,12 @@ function HomePage() {
             className="text-center max-w-2xl mx-auto mb-20"
             data-aos="fade-up"
           >
-            <span className="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3.5 py-1.5 rounded-full inline-block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#D90429] bg-[#D90429]/10 px-3.5 py-1.5 rounded-full inline-block">
               Insights & Trends
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold mt-4 tracking-tight text-slate-900">
               Latest from the{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent">
                 Tech Blog
               </span>
             </h2>
@@ -1349,7 +1160,7 @@ function HomePage() {
                     alt="AI DevOps Pipeline Visual"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
+                  <span className="absolute top-4 left-4 bg-[#D90429] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
                     Artificial Intelligence
                   </span>
                 </div>
@@ -1357,7 +1168,7 @@ function HomePage() {
                   <p className="text-slate-400 text-xs font-semibold">
                     March 12, 2026 • 5 min read
                   </p>
-                  <h3 className="text-xl font-bold text-slate-900 hover:text-blue-600 transition duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 hover:text-[#D90429] transition duration-300">
                     How AI is redefining automated DevOps pipelines
                   </h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
@@ -1370,7 +1181,7 @@ function HomePage() {
               <div className="px-6 pb-6 pt-2">
                 <Link
                   to="/insights"
-                  className="text-sm font-bold text-blue-600 flex items-center gap-1 group"
+                  className="text-sm font-bold text-[#D90429] flex items-center gap-1 group"
                 >
                   Read Article{" "}
                   <i className="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
@@ -1391,7 +1202,7 @@ function HomePage() {
                     alt="Cloud Scalability Visual"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <span className="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
+                  <span className="absolute top-4 left-4 bg-[#D90429] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
                     Cloud Native
                   </span>
                 </div>
@@ -1399,7 +1210,7 @@ function HomePage() {
                   <p className="text-slate-400 text-xs font-semibold">
                     March 5, 2026 • 4 min read
                   </p>
-                  <h3 className="text-xl font-bold text-slate-900 hover:text-purple-600 transition duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 hover:text-[#D90429] transition duration-300">
                     Serverless & Edge: The ultimate scaling playbook
                   </h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
@@ -1411,7 +1222,7 @@ function HomePage() {
               <div className="px-6 pb-6 pt-2">
                 <Link
                   to="/insights"
-                  className="text-sm font-bold text-purple-600 flex items-center gap-1 group"
+                  className="text-sm font-bold text-[#D90429] flex items-center gap-1 group"
                 >
                   Read Article{" "}
                   <i className="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
@@ -1432,7 +1243,7 @@ function HomePage() {
                     alt="Zero Trust Security Visual"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <span className="absolute top-4 left-4 bg-emerald-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
+                  <span className="absolute top-4 left-4 bg-[#D90429] text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full">
                     Cybersecurity
                   </span>
                 </div>
@@ -1440,7 +1251,7 @@ function HomePage() {
                   <p className="text-slate-400 text-xs font-semibold">
                     Feb 28, 2026 • 6 min read
                   </p>
-                  <h3 className="text-xl font-bold text-slate-900 hover:text-emerald-600 transition duration-300">
+                  <h3 className="text-xl font-bold text-slate-900 hover:text-[#D90429] transition duration-300">
                     Establishing zero trust in hybrid developer environments
                   </h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
@@ -1452,7 +1263,7 @@ function HomePage() {
               <div className="px-6 pb-6 pt-2">
                 <Link
                   to="/insights"
-                  className="text-sm font-bold text-emerald-600 flex items-center gap-1 group"
+                  className="text-sm font-bold text-[#D90429] flex items-center gap-1 group"
                 >
                   Read Article{" "}
                   <i className="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
@@ -1500,15 +1311,15 @@ function HomePage() {
 
                 {/* Live Node Status at the top */}
                 <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 shadow-lg">
-                  <span className="h-2 w-2 rounded-full bg-blue-500 animate-ping"></span>
-                  <span className="text-[10px] text-blue-400 font-bold uppercase tracking-wider">
+                  <span className="h-2 w-2 rounded-full bg-[#D90429] animate-ping"></span>
+                  <span className="text-[10px] text-[#FF1744] font-bold uppercase tracking-wider">
                     Live System Active
                   </span>
                 </div>
 
                 {/* Slide Metadata text overlay */}
                 <div className="absolute bottom-6 left-6 right-6 z-20 text-left">
-                  <span className="text-[9px] uppercase font-bold tracking-widest text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded inline-block mb-1">
+                  <span className="text-[9px] uppercase font-bold tracking-widest text-[#FF1744] bg-[#D90429]/10 border border-[#D90429]/20 px-2 py-0.5 rounded inline-block mb-1">
                     System Core
                   </span>
                   <h4 className="text-lg font-bold text-white tracking-tight leading-snug drop-shadow-md">
@@ -1530,7 +1341,7 @@ function HomePage() {
                       }}
                       className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
                         idx === activeSlide
-                          ? "w-6 bg-gradient-to-r from-blue-500 to-indigo-500"
+                          ? "w-6 bg-gradient-to-r from-[#D90429] to-[#FF1744]"
                           : "w-1.5 bg-white/30 hover:bg-white/50"
                       }`}
                       aria-label={`Go to slide ${idx + 1}`}
@@ -1542,7 +1353,7 @@ function HomePage() {
 
             {/* Right Column Content */}
             <div className="lg:col-span-7 space-y-6" data-aos="fade-left">
-              <span className="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3.5 py-1.5 rounded-full inline-block">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#D90429] bg-[#D90429]/10 px-3.5 py-1.5 rounded-full inline-block">
                 Who We Are
               </span>
               <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
@@ -1563,19 +1374,19 @@ function HomePage() {
 
               <div className="grid sm:grid-cols-1 gap-4 pt-4 text-slate-800">
                 <div className="flex items-center space-x-3">
-                  <i className="fas fa-check-circle text-blue-600 text-lg"></i>
+                  <i className="fas fa-check-circle text-[#D90429] text-lg"></i>
                   <span className="font-medium text-sm">
                     150+ Projects Delivered Worldwide
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <i className="fas fa-check-circle text-blue-600 text-lg"></i>
+                  <i className="fas fa-check-circle text-[#D90429] text-lg"></i>
                   <span className="font-medium text-sm">
                     Trusted by Growing Startups & Enterprises
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <i className="fas fa-check-circle text-blue-600 text-lg"></i>
+                  <i className="fas fa-check-circle text-[#D90429] text-lg"></i>
                   <span className="font-medium text-sm">
                     Built for Performance, Security & Scale
                   </span>
@@ -1592,16 +1403,16 @@ function HomePage() {
         className="py-28 bg-white text-slate-900 relative border-t border-slate-100"
       >
         {/* Glow Background blobs */}
-        <div className="absolute top-1/3 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[100px] pulse-glow"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-500/5 rounded-full blur-[90px] pulse-glow delay-700"></div>
+        <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#D90429]/10 rounded-full blur-[100px] pulse-glow"></div>
+        <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#FF1744]/10 rounded-full blur-[90px] pulse-glow delay-700"></div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div
-            className="max-w-4xl mx-auto bg-[#0B0F19] rounded-3xl p-8 md:p-14 border border-white/10 shadow-2xl text-white"
+            className="max-w-4xl mx-auto bg-[#111111] rounded-3xl p-8 md:p-14 border border-white/10 shadow-2xl text-white"
             data-aos="zoom-in"
           >
             <div className="text-center max-w-xl mx-auto mb-10">
-              <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3.5 py-1.5 rounded-full inline-block mb-4">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#FF1744] bg-[#D90429]/10 border border-[#D90429]/20 px-3.5 py-1.5 rounded-full inline-block mb-4">
                 Let’s Build Something Powerful Together
               </span>
               <div className="min-h-[96px] md:min-h-[80px] flex items-center justify-center mb-2 overflow-hidden">
@@ -1760,7 +1571,7 @@ function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#07090e] text-slate-400 relative z-10 pt-16 pb-8">
+      <footer className="bg-[#0A0A0A] text-slate-400 relative z-10 pt-16 pb-8">
         <div className="container mx-auto px-6">
           {/* Main Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
@@ -1768,51 +1579,8 @@ function HomePage() {
             <div className="space-y-5 footer-col-1">
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  {/* SVG Logo Icon */}
-                  <svg
-                    viewBox="0 0 100 100"
-                    className="w-6 h-6 flex-shrink-0"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="divoai-footer-gradient"
-                        x1="0%"
-                        y1="100%"
-                        x2="100%"
-                        y2="0%"
-                      >
-                        <stop offset="0%" stopColor="#3B82F6" />
-                        <stop offset="100%" stopColor="#8B5CF6" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M26 80 L50 28 L74 80"
-                      stroke="url(#divoai-footer-gradient)"
-                      strokeWidth="15"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle
-                      cx="50"
-                      cy="74"
-                      r="8"
-                      fill="url(#divoai-footer-gradient)"
-                    />
-                  </svg>
-                  {/* Brand Text */}
-                  <div className="text-2xl font-black transition flex items-center text-white tracking-tight">
-                    <span>Divo</span>
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">
-                      AI
-                    </span>
-                  </div>
-                  <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
+                  <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain mb-2 scale-[2.5] md:scale-[3] origin-left" />
                 </div>
-                <span className="text-[10px] font-semibold tracking-widest text-slate-500 uppercase">
-                  IT Solutions
-                </span>
               </div>
               <p className="text-sm leading-relaxed text-slate-500">
                 DivoAI IT Solutions delivers modern websites, powerful software
@@ -1826,7 +1594,7 @@ function HomePage() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/40 hover:bg-blue-500/10 transition-all duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200"
                 >
                   <i className="fab fa-linkedin text-sm"></i>
                 </a>
@@ -1834,7 +1602,7 @@ function HomePage() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-pink-400 hover:border-pink-500/40 hover:bg-pink-500/10 transition-all duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200"
                 >
                   <i className="fab fa-instagram text-sm"></i>
                 </a>
@@ -1842,7 +1610,7 @@ function HomePage() {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-sky-400 hover:border-sky-500/40 hover:bg-sky-500/10 transition-all duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200"
                 >
                   <i className="fab fa-twitter text-sm"></i>
                 </a>
@@ -1860,7 +1628,7 @@ function HomePage() {
             {/* Col 2 — Quick Links */}
             <div className="footer-col-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full"></div>
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">
                   Quick Links
                 </h5>
@@ -1876,9 +1644,9 @@ function HomePage() {
                   <li key={label}>
                     <Link
                       to={to}
-                      className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group"
+                      className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group"
                     >
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
                       <span className="footer-link-text">{label}</span>
                     </Link>
                   </li>
@@ -1889,7 +1657,7 @@ function HomePage() {
             {/* Col 3 — Our Services */}
             <div className="footer-col-3">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full"></div>
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">
                   Our Services
                 </h5>
@@ -1905,9 +1673,9 @@ function HomePage() {
                   <li key={service}>
                     <a
                       href="#services"
-                      className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group"
+                      className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group"
                     >
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
                       <span className="footer-link-text">{service}</span>
                     </a>
                   </li>
@@ -1918,7 +1686,7 @@ function HomePage() {
             {/* Col 4 — Contact Us */}
             <div className="footer-col-4">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full"></div>
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">
                   Contact Us
                 </h5>
@@ -1926,8 +1694,8 @@ function HomePage() {
               <ul className="space-y-3.5">
                 {/* Location */}
                 <li className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i className="fas fa-map-marker-alt text-xs text-blue-400"></i>
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/10 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i className="fas fa-map-marker-alt text-xs text-[#D90429]"></i>
                   </div>
                   <div>
                     <p className="text-sm text-slate-400 leading-relaxed">
@@ -1937,24 +1705,24 @@ function HomePage() {
                 </li>
                 {/* Email */}
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-envelope text-xs text-purple-400"></i>
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/10 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-envelope text-xs text-[#D90429]"></i>
                   </div>
                   <a
                     href="mailto:hello@divoai.com"
-                    className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200"
                   >
                     hello@divoai.com
                   </a>
                 </li>
                 {/* Phone */}
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-phone-alt text-xs text-blue-400"></i>
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/10 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-phone-alt text-xs text-[#D90429]"></i>
                   </div>
                   <a
                     href="tel:+917260912826"
-                    className="text-sm text-slate-400 hover:text-blue-400 transition-colors duration-200"
+                    className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200"
                   >
                     +91 72609 12826
                   </a>
@@ -1975,13 +1743,13 @@ function HomePage() {
             <div className="flex gap-6">
               <a
                 href="#home"
-                className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
+                className="text-slate-400 hover:text-[#D90429] transition-colors duration-200"
               >
                 Terms of Service
               </a>
               <a
                 href="#home"
-                className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
+                className="text-slate-400 hover:text-[#D90429] transition-colors duration-200"
               >
                 Privacy Policy
               </a>
@@ -2002,7 +1770,7 @@ function HomePage() {
             <div className="bg-gradient-to-r from-slate-900 to-slate-950 px-4 py-3 flex items-center justify-between border-b border-white/5">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 flex items-center justify-center border border-white/10 text-white font-black text-sm">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#D90429] to-[#FF1744] flex items-center justify-center border border-white/10 text-white font-black text-sm">
                     D
                   </div>
                   <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-[#0F172A]"></span>
@@ -2040,7 +1808,7 @@ function HomePage() {
                   key={msg.id}
                   className="flex gap-2 max-w-[85%] mb-3 animate-fade-in-up"
                 >
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 flex-shrink-0 flex items-center justify-center text-[10px] font-black text-white border border-white/5">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#D90429] to-[#FF1744] flex-shrink-0 flex items-center justify-center text-[10px] font-black text-white border border-white/5">
                     N
                   </div>
                   <div className="bg-slate-900 border border-white/5 text-slate-300 text-xs rounded-2xl rounded-tl-none p-3 shadow-md leading-relaxed whitespace-pre-line">
@@ -2052,7 +1820,7 @@ function HomePage() {
               {/* Typing Indicator */}
               {isTyping && (
                 <div className="flex gap-2 max-w-[85%] mb-3 items-center">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-500 to-purple-600 flex-shrink-0 flex items-center justify-center text-[10px] font-black text-white border border-white/5 animate-pulse">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#D90429] to-[#FF1744] flex-shrink-0 flex items-center justify-center text-[10px] font-black text-white border border-white/5 animate-pulse">
                     N
                   </div>
                   <div className="bg-slate-900 border border-white/5 text-slate-400 text-xs rounded-2xl rounded-tl-none px-4 py-3 shadow-md flex items-center gap-1">
@@ -2075,7 +1843,7 @@ function HomePage() {
                       key={reply}
                       type="button"
                       onClick={() => setWhatsAppMessage(reply)}
-                      className="text-[10px] text-blue-400 hover:text-white bg-blue-500/10 hover:bg-blue-600 border border-blue-500/20 hover:border-blue-500 rounded-xl px-3 py-1.5 transition-all duration-200 text-right max-w-[90%] shadow-sm"
+                      className="text-[10px] text-white hover:text-white bg-[#D90429]/10 hover:bg-[#D90429] border border-[#D90429]/20 hover:border-[#D90429] rounded-xl px-3 py-1.5 transition-all duration-200 text-right max-w-[90%] shadow-sm"
                     >
                       {reply}
                     </button>

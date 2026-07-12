@@ -3,11 +3,18 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+  <link rel="icon" type="image/png" href="%PUBLIC_URL%/tabicon_square_white.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0c10" />
-  <meta name="description" content="DivoAI IT Solutions - Building Digital Products That Scale" />
-  <title>DivoAI | Building Digital Products That Scale</title>
+  <meta name="theme-color" content="#111111" />
+  <meta name="description"
+    content="DivoAI — Premium AI-powered IT solutions. We build high-performance websites, scalable SaaS products, and intelligent software systems." />
+  <title>DivoAI</title>
+  <!-- Google Fonts: Inter + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -15,11 +22,25 @@
       theme: {
         extend: {
           colors: {
-            brandDark: '#0B0F19',
-            brandLight: '#F8FAFC',
+            cherry: {
+              DEFAULT: '#D90429',
+              dark: '#B50321',
+              light: '#FF1744',
+            },
+            brandBlack: '#111111',
+            brandDeep: '#0A0A0A',
+            brandWhite: '#FFFFFF',
+            brandOff: '#F8F9FB',
+            brandGray: {
+              100: '#EAEAEA',
+              500: '#6B7280',
+              800: '#1F1F1F',
+            },
+            brandSuccess: '#10B981',
           },
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
           }
         }
       }

@@ -7,7 +7,7 @@ const articles = [
   {
     id: 'ai-devops',
     category: 'Artificial Intelligence',
-    categoryBg: 'bg-blue-600',
+    categoryBg: 'bg-[#D90429]',
     title: 'How AI is redefining automated DevOps pipelines',
     date: 'March 12, 2026',
     readTime: '5 min read',
@@ -92,7 +92,7 @@ spec:
   {
     id: 'serverless-edge',
     category: 'Cloud Native',
-    categoryBg: 'bg-purple-600',
+    categoryBg: 'bg-[#D90429]',
     title: 'Serverless & Edge: The ultimate scaling playbook',
     date: 'March 5, 2026',
     readTime: '4 min read',
@@ -126,7 +126,7 @@ spec:
   {
     id: 'zero-trust',
     category: 'Cybersecurity',
-    categoryBg: 'bg-emerald-600',
+    categoryBg: 'bg-[#D90429]',
     title: 'Establishing zero trust in hybrid developer environments',
     date: 'Feb 28, 2026',
     readTime: '6 min read',
@@ -156,7 +156,7 @@ spec:
   {
     id: 'figma-tokens',
     category: 'Product Design',
-    categoryBg: 'bg-pink-600',
+    categoryBg: 'bg-[#D90429]',
     title: 'Designing with tokens: Translating Figma to production code',
     date: 'Feb 15, 2026',
     readTime: '5 min read',
@@ -188,7 +188,7 @@ spec:
   {
     id: 'saas-billing',
     category: 'SaaS Strategy',
-    categoryBg: 'bg-indigo-600',
+    categoryBg: 'bg-[#D90429]',
     title: 'Usage-based SaaS billing: Architecture and trade-offs',
     date: 'Feb 5, 2026',
     readTime: '8 min read',
@@ -237,7 +237,7 @@ spec:
   {
     id: 'predictive-telemetry',
     category: 'Cloud Native',
-    categoryBg: 'bg-cyan-600',
+    categoryBg: 'bg-[#D90429]',
     title: 'Predictive telemetry: Shielding platforms from downtime',
     date: 'Jan 22, 2026',
     readTime: '6 min read',
@@ -378,50 +378,24 @@ export default function InsightsPage() {
       {/* ── NAVBAR ── */}
       <nav
         id="services-navbar"
-        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/5"
+        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent"
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2 cursor-pointer group">
-            {/* SVG Logo Icon */}
-            <svg viewBox="0 0 100 100" className="w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="divoai-logo-grad-ins" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#3B82F6" />
-                  <stop offset="100%" stopColor="#8B5CF6" />
-                </linearGradient>
-              </defs>
-              <path 
-                d="M26 80 L50 28 L74 80" 
-                stroke="url(#divoai-logo-grad-ins)" 
-                strokeWidth="15" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-              />
-              <circle cx="50" cy="74" r="8" fill="url(#divoai-logo-grad-ins)" />
-            </svg>
-            
-            {/* Brand Name */}
-            <div className="logo-text text-2xl font-extrabold tracking-tight transition group-hover:opacity-90 flex items-center text-white">
-              <span>Divo</span>
-              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
-            </div>
-            
-            {/* Divider and Subtitle */}
-            <div className="w-1.5 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full group-hover:scale-y-110 transition duration-300" />
-            <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase hidden sm:inline">IT Solutions</span>
+                        <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 scale-[2.5] md:scale-[3] origin-left group-hover:scale-[2.6] md:group-hover:scale-[3.1]" />
           </Link>
 
           <div className="hidden md:flex space-x-8 text-slate-300 font-medium">
             <Link to="/" className="nav-link hover:text-white transition">Home</Link>
             <Link to="/services" className="nav-link hover:text-white transition">Services</Link>
-            <Link to="/insights" className="nav-link text-blue-400 hover:text-white transition">Insights</Link>
+            <Link to="/insights" className="nav-link text-[#D90429] hover:text-white transition">Insights</Link>
             <Link to="/about" className="nav-link hover:text-white transition">About</Link>
             <Link to="/contact" className="nav-link hover:text-white transition">Contact</Link>
           </div>
 
           <Link
             to="/contact"
-            className="hidden md:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-500/20 transition-all hover:scale-[1.03]"
+            className="hidden md:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-semibold text-sm hover:shadow-lg hover:shadow-[#D90429]/20 transition-all hover:scale-[1.03]"
           >
             Get Started
           </Link>
@@ -455,7 +429,7 @@ export default function InsightsPage() {
             <span>Services</span>
             <i className="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200"></i>
           </Link>
-          <Link to="/insights" className="mobile-menu-link group text-blue-400 font-semibold">
+          <Link to="/insights" className="mobile-menu-link group text-[#D90429] font-semibold">
             <span>Insights</span>
             <i className="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200"></i>
           </Link>
@@ -470,7 +444,7 @@ export default function InsightsPage() {
           <div className="mobile-menu-cta pt-2">
             <Link
               to="/contact"
-              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-center text-sm shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 transition duration-300"
+              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-bold text-center text-sm shadow-lg shadow-[#D90429]/10 hover:shadow-[#D90429]/25 transition duration-300"
             >
               Get Started
             </Link>
@@ -481,15 +455,15 @@ export default function InsightsPage() {
       {/* ── HERO SECTION ── */}
       <section className="relative pt-40 pb-20 overflow-hidden">
         {/* Glow elements */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#D90429]/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#FF1744]/10 rounded-full blur-[120px] pointer-events-none" />
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_75%,transparent_100%)]" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold tracking-wide mb-6"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D90429]/10 border border-[#D90429]/20 text-red-300 text-xs font-semibold tracking-wide mb-6"
               data-aos="fade-down"
             >
               <i className="fas fa-microchip animate-pulse"></i> DivoAI Tech Insights
@@ -524,7 +498,7 @@ export default function InsightsPage() {
                   alt={featuredArticle.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <span className="absolute top-6 left-6 bg-blue-600 text-white text-[10px] font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md">
+                <span className="absolute top-6 left-6 bg-[#D90429] text-white text-[10px] font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full shadow-md">
                   Featured Article
                 </span>
               </div>
@@ -537,7 +511,7 @@ export default function InsightsPage() {
                     <span>•</span>
                     <span>{featuredArticle.readTime}</span>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-extrabold text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-white group-hover:text-[#D90429] transition-colors duration-300 leading-tight">
                     {featuredArticle.title}
                   </h3>
                   <p className="text-slate-400 text-sm leading-relaxed">
@@ -546,7 +520,7 @@ export default function InsightsPage() {
                 </div>
                 <button
                   onClick={() => setActiveArticle(featuredArticle)}
-                  className="mt-8 text-sm font-bold text-blue-400 flex items-center gap-2 group/btn cursor-pointer w-fit"
+                  className="mt-8 text-sm font-bold text-[#D90429] flex items-center gap-2 group/btn cursor-pointer w-fit"
                 >
                   Read Featured Article
                   <i className="fas fa-arrow-right text-xs group-hover/btn:translate-x-1.5 transition-transform duration-200" />
@@ -570,7 +544,7 @@ export default function InsightsPage() {
                 placeholder="Search architecture logs, categories, tags..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-[#0d1320] border border-white/10 rounded-2xl pl-12 pr-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 transition-colors duration-300"
+                className="w-full bg-[#0d1320] border border-white/10 rounded-2xl pl-12 pr-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D90429]/50 transition-colors duration-300"
               />
               {searchTerm && (
                 <button
@@ -609,7 +583,7 @@ export default function InsightsPage() {
               <p className="text-slate-500 text-sm mt-1">Try tweaking your search term or selecting another category.</p>
               <button
                 onClick={() => { setSearchTerm(''); setSelectedCategory('All'); }}
-                className="mt-6 text-xs font-bold text-blue-400 hover:underline"
+                className="mt-6 text-xs font-bold text-[#D90429] hover:underline"
               >
                 Clear Search & Filters
               </button>
@@ -640,7 +614,7 @@ export default function InsightsPage() {
                         <span>•</span>
                         <span>{article.readTime}</span>
                       </div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                      <h3 className="text-lg font-bold text-white group-hover:text-[#D90429] transition-colors duration-300 leading-tight">
                         {article.title}
                       </h3>
                       <p className="text-slate-400 text-xs leading-relaxed">
@@ -651,7 +625,7 @@ export default function InsightsPage() {
                   <div className="px-6 pb-6 pt-2 text-left">
                     <button
                       onClick={() => setActiveArticle(article)}
-                      className="text-xs font-bold text-blue-400 hover:text-white flex items-center gap-1 group/btn cursor-pointer"
+                      className="text-xs font-bold text-[#D90429] hover:text-white flex items-center gap-1 group/btn cursor-pointer"
                     >
                       Read Article
                       <i className="fas fa-arrow-right text-[9px] group-hover/btn:translate-x-1 transition-transform" />
@@ -672,7 +646,7 @@ export default function InsightsPage() {
             data-aos="zoom-in"
           >
             <div className="relative z-10 max-w-2xl mx-auto space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3.5 py-1.5 rounded-full inline-block">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#FF1744] bg-[#D90429]/10 border border-[#D90429]/20 px-3.5 py-1.5 rounded-full inline-block">
                 Weekly Tech Brief
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
@@ -694,12 +668,12 @@ export default function InsightsPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     placeholder="Enter your system architect email..."
-                    className="w-full bg-[#0d1320]/80 border border-white/10 rounded-full px-5 py-3.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/40 transition-colors duration-300"
+                    className="w-full bg-[#0d1320]/80 border border-white/10 rounded-full px-5 py-3.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#D90429]/40 transition-colors duration-300"
                   />
                   <button
                     type="submit"
                     disabled={newsletterStatus === 'submitting'}
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs hover:shadow-lg hover:shadow-blue-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed flex-shrink-0"
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] hover:from-[#FF1744] hover:to-[#D90429] text-white font-bold text-xs hover:shadow-lg hover:shadow-[#D90429]/20 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed flex-shrink-0"
                   >
                     {newsletterStatus === 'submitting' ? (
                       <>Syncing... <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" /></>
@@ -715,7 +689,7 @@ export default function InsightsPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="ins-footer bg-[#07090e] text-slate-400 relative z-10 pt-16 pb-8 border-t border-white/5">
+      <footer className="ins-footer bg-[#0A0A0A] text-slate-400 relative z-10 pt-16 pb-8 border-t border-white/5">
         <div className="container mx-auto px-6 max-w-6xl">
           {/* Main Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
@@ -723,32 +697,7 @@ export default function InsightsPage() {
             {/* Col 1 — Brand */}
             <div className="space-y-5 ins-footer-col-1 text-left">
               <div>
-                <div className="flex items-center gap-2 mb-1">
-                  {/* SVG Logo Icon */}
-                  <svg viewBox="0 0 100 100" className="w-6 h-6 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <linearGradient id="divoai-ins-footer-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#3B82F6" />
-                        <stop offset="100%" stopColor="#8B5CF6" />
-                      </linearGradient>
-                    </defs>
-                    <path 
-                      d="M26 80 L50 28 L74 80" 
-                      stroke="url(#divoai-ins-footer-gradient)" 
-                      strokeWidth="15" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                    />
-                    <circle cx="50" cy="74" r="8" fill="url(#divoai-ins-footer-gradient)" />
-                  </svg>
-                  {/* Brand Text */}
-                  <div className="text-2xl font-black transition flex items-center text-white tracking-tight">
-                    <span>Divo</span>
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
-                  </div>
-                  <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full" />
-                </div>
-                <span className="text-[10px] font-semibold tracking-widest text-slate-500 uppercase">IT Solutions</span>
+                                  <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain mb-2 scale-[2.5] md:scale-[3] origin-left" />
               </div>
               <p className="text-sm leading-relaxed text-slate-500">
                 DivoAI IT Solutions delivers modern websites, powerful software tools, and intelligent IT systems tailored for today’s businesses. Every solution we create is designed to be fast, secure, scalable, and user-focused.
@@ -761,7 +710,7 @@ export default function InsightsPage() {
                     href={`https://${s}.com`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/40 hover:bg-blue-500/10 transition-all duration-200"
+                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200"
                   >
                     <i className={`fab fa-${s} text-sm`} />
                   </a>
@@ -772,7 +721,7 @@ export default function InsightsPage() {
             {/* Col 2 — Quick Links */}
             <div className="ins-footer-col-2 text-left">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full" />
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Quick Links</h5>
               </div>
               <ul className="space-y-3.5">
@@ -784,8 +733,8 @@ export default function InsightsPage() {
                   { label: 'Contact Us', to: '/contact' },
                 ].map(({ label, to }) => (
                   <li key={label}>
-                    <Link to={to} className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
+                    <Link to={to} className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group">
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
                       <span>{label}</span>
                     </Link>
                   </li>
@@ -796,7 +745,7 @@ export default function InsightsPage() {
             {/* Col 3 — Our Services */}
             <div className="ins-footer-col-3 text-left">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full" />
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Our Services</h5>
               </div>
               <ul className="space-y-3.5">
@@ -808,8 +757,8 @@ export default function InsightsPage() {
                   { label: 'IT Support', id: 'it-infrastructure' }
                 ].map(({ label, id }) => (
                   <li key={label}>
-                    <Link to={`/services#${id}`} className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
+                    <Link to={`/services#${id}`} className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group">
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200" />
                       <span>{label}</span>
                     </Link>
                   </li>
@@ -820,29 +769,29 @@ export default function InsightsPage() {
             {/* Col 4 — Contact Us */}
             <div className="ins-footer-col-4 text-left">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full" />
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Contact Us</h5>
               </div>
               <ul className="space-y-3.5">
                 <li className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i className="fas fa-map-marker-alt text-xs text-blue-400" />
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/15 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i className="fas fa-map-marker-alt text-xs text-[#D90429]" />
                   </div>
                   <p className="text-sm text-slate-400 leading-relaxed">Bengaluru, India</p>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-envelope text-xs text-purple-400" />
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/15 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-envelope text-xs text-[#D90429]" />
                   </div>
-                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
+                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200">
                     hello@divoai.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-phone-alt text-xs text-blue-400" />
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/15 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-phone-alt text-xs text-[#D90429]" />
                   </div>
-                  <a href="tel:+917260912860" className="text-sm text-slate-400 hover:text-blue-400 transition-colors duration-200">
+                  <a href="tel:+917260912860" className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200">
                     +91 72609 12860
                   </a>
                 </li>
@@ -854,8 +803,8 @@ export default function InsightsPage() {
           <div className="ins-footer-bottom-bar border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
             <p>© 2026 <span className="text-slate-200 font-semibold">DivoAI IT Solutions</span> — Building Digital Products That Scale. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Privacy Policy</a>
+              <a href="#" className="text-slate-400 hover:text-[#D90429] transition-colors duration-200">Terms of Service</a>
+              <a href="#" className="text-slate-400 hover:text-[#D90429] transition-colors duration-200">Privacy Policy</a>
               <span className="text-slate-500">ISO 27001 Certified</span>
             </div>
           </div>

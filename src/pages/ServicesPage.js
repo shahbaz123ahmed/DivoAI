@@ -7,14 +7,14 @@ const services = [
   {
     id: 'web-development',
     icon: 'fa-laptop-code',
-    color: 'blue',
-    iconBg: 'bg-blue-50',
-    iconText: 'text-blue-600',
-    accentFrom: 'from-blue-500',
-    accentTo: 'to-indigo-600',
-    badgeBg: 'bg-blue-50',
-    badgeText: 'text-blue-700',
-    borderColor: 'border-blue-100',
+    color: 'red',
+    iconBg: 'bg-[#D90429]/10',
+    iconText: 'text-[#D90429]',
+    accentFrom: 'from-[#D90429]',
+    accentTo: 'to-[#FF1744]',
+    badgeBg: 'bg-[#D90429]/10',
+    badgeText: 'text-[#FF1744]',
+    borderColor: 'border-[#D90429]/20',
     label: 'Web Development',
     title: 'Build High-Converting Websites',
     tagline: 'From landing pages to enterprise portals — we craft every pixel with purpose.',
@@ -37,14 +37,14 @@ const services = [
   {
     id: 'custom-software',
     icon: 'fa-code',
-    color: 'purple',
-    iconBg: 'bg-purple-50',
-    iconText: 'text-purple-600',
-    accentFrom: 'from-purple-500',
-    accentTo: 'to-pink-600',
-    badgeBg: 'bg-purple-50',
-    badgeText: 'text-purple-700',
-    borderColor: 'border-purple-100',
+    color: 'red',
+    iconBg: 'bg-[#D90429]/10',
+    iconText: 'text-[#D90429]',
+    accentFrom: 'from-[#D90429]',
+    accentTo: 'to-[#FF1744]',
+    badgeBg: 'bg-[#D90429]/10',
+    badgeText: 'text-[#FF1744]',
+    borderColor: 'border-[#D90429]/20',
     label: 'Custom Software',
     title: 'Develop Powerful Custom Software',
     tagline: 'Bespoke solutions engineered precisely around your operational DNA.',
@@ -67,14 +67,14 @@ const services = [
   {
     id: 'saas-products',
     icon: 'fa-rocket',
-    color: 'cyan',
-    iconBg: 'bg-cyan-50',
-    iconText: 'text-cyan-600',
-    accentFrom: 'from-cyan-500',
-    accentTo: 'to-blue-600',
-    badgeBg: 'bg-cyan-50',
-    badgeText: 'text-cyan-700',
-    borderColor: 'border-cyan-100',
+    color: 'red',
+    iconBg: 'bg-[#D90429]/10',
+    iconText: 'text-[#D90429]',
+    accentFrom: 'from-[#D90429]',
+    accentTo: 'to-[#FF1744]',
+    badgeBg: 'bg-[#D90429]/10',
+    badgeText: 'text-[#FF1744]',
+    borderColor: 'border-[#D90429]/20',
     label: 'SaaS Products',
     title: 'Launch Scalable SaaS Platforms',
     tagline: 'Turn your idea into a revenue-generating software product.',
@@ -97,14 +97,14 @@ const services = [
   {
     id: 'ui-ux-design',
     icon: 'fa-bezier-curve',
-    color: 'indigo',
-    iconBg: 'bg-indigo-50',
-    iconText: 'text-indigo-600',
-    accentFrom: 'from-indigo-500',
-    accentTo: 'to-purple-600',
-    badgeBg: 'bg-indigo-50',
-    badgeText: 'text-indigo-700',
-    borderColor: 'border-indigo-100',
+    color: 'red',
+    iconBg: 'bg-[#D90429]/10',
+    iconText: 'text-[#D90429]',
+    accentFrom: 'from-[#D90429]',
+    accentTo: 'to-[#FF1744]',
+    badgeBg: 'bg-[#D90429]/10',
+    badgeText: 'text-[#FF1744]',
+    borderColor: 'border-[#D90429]/20',
     label: 'UI/UX Design',
     title: 'Design Experiences Users Love',
     tagline: 'Where research meets craft — interfaces that feel inevitable.',
@@ -127,14 +127,14 @@ const services = [
   {
     id: 'automation',
     icon: 'fa-cogs',
-    color: 'pink',
-    iconBg: 'bg-pink-50',
-    iconText: 'text-pink-600',
-    accentFrom: 'from-pink-500',
-    accentTo: 'to-rose-600',
-    badgeBg: 'bg-pink-50',
-    badgeText: 'text-pink-700',
-    borderColor: 'border-pink-100',
+    color: 'red',
+    iconBg: 'bg-[#D90429]/10',
+    iconText: 'text-[#D90429]',
+    accentFrom: 'from-[#D90429]',
+    accentTo: 'to-[#FF1744]',
+    badgeBg: 'bg-[#D90429]/10',
+    badgeText: 'text-[#FF1744]',
+    borderColor: 'border-[#D90429]/20',
     label: 'Automation',
     title: 'Automate & Optimize Your Business',
     tagline: 'Replace repetitive work with intelligent, self-running systems.',
@@ -157,14 +157,14 @@ const services = [
   {
     id: 'it-support',
     icon: 'fa-headset',
-    color: 'emerald',
-    iconBg: 'bg-emerald-50',
-    iconText: 'text-emerald-600',
-    accentFrom: 'from-emerald-500',
-    accentTo: 'to-teal-600',
-    badgeBg: 'bg-emerald-50',
-    badgeText: 'text-emerald-700',
-    borderColor: 'border-emerald-100',
+    color: 'red',
+    iconBg: 'bg-[#D90429]/10',
+    iconText: 'text-[#D90429]',
+    accentFrom: 'from-[#D90429]',
+    accentTo: 'to-[#FF1744]',
+    badgeBg: 'bg-[#D90429]/10',
+    badgeText: 'text-[#FF1744]',
+    borderColor: 'border-[#D90429]/20',
     label: 'IT Support',
     title: 'Complete IT Solutions & Support',
     tagline: 'Your infrastructure, always on. Always secure.',
@@ -215,12 +215,7 @@ const techStack = [
 ];
 
 const colorMap = {
-  blue:    { ring: 'ring-blue-200',    dot: 'bg-blue-500',    badge: 'bg-blue-600',    pill: 'bg-blue-50 text-blue-700 border-blue-100'    },
-  purple:  { ring: 'ring-purple-200',  dot: 'bg-purple-500',  badge: 'bg-purple-600',  pill: 'bg-purple-50 text-purple-700 border-purple-100'  },
-  cyan:    { ring: 'ring-cyan-200',    dot: 'bg-cyan-500',    badge: 'bg-cyan-600',    pill: 'bg-cyan-50 text-cyan-700 border-cyan-100'    },
-  indigo:  { ring: 'ring-indigo-200',  dot: 'bg-indigo-500',  badge: 'bg-indigo-600',  pill: 'bg-indigo-50 text-indigo-700 border-indigo-100'  },
-  pink:    { ring: 'ring-pink-200',    dot: 'bg-pink-500',    badge: 'bg-pink-600',    pill: 'bg-pink-50 text-pink-700 border-pink-100'    },
-  emerald: { ring: 'ring-emerald-200', dot: 'bg-emerald-500', badge: 'bg-emerald-600', pill: 'bg-emerald-50 text-emerald-700 border-emerald-100' },
+  red: { ring: 'ring-[#D90429]/20', dot: 'bg-[#D90429]', badge: 'bg-[#FF1744]', pill: 'bg-[#D90429]/10 text-[#FF1744] border-[#D90429]/20' },
 };
 
 export default function ServicesPage() {
@@ -317,42 +312,16 @@ export default function ServicesPage() {
       {/* ── NAVBAR ── */}
       <nav
         id="services-navbar"
-        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/5"
+        className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent"
       >
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2 cursor-pointer group">
-            {/* SVG Logo Icon */}
-            <svg viewBox="0 0 100 100" className="w-6 h-6 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="divoai-logo-grad-svc" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#3B82F6" />
-                  <stop offset="100%" stopColor="#8B5CF6" />
-                </linearGradient>
-              </defs>
-              <path 
-                d="M26 80 L50 28 L74 80" 
-                stroke="url(#divoai-logo-grad-svc)" 
-                strokeWidth="15" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-              />
-              <circle cx="50" cy="74" r="8" fill="url(#divoai-logo-grad-svc)" />
-            </svg>
-            
-            {/* Brand Name */}
-            <div className="logo-text text-2xl font-extrabold tracking-tight transition group-hover:opacity-90 flex items-center text-white">
-              <span>Divo</span>
-              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
-            </div>
-            
-            {/* Divider and Subtitle */}
-            <div className="w-1.5 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full group-hover:scale-y-110 transition duration-300" />
-            <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase hidden sm:inline">IT Solutions</span>
+                        <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain transition-transform duration-300 scale-[2.5] md:scale-[3] origin-left group-hover:scale-[2.6] md:group-hover:scale-[3.1]" />
           </Link>
 
           <div className="hidden md:flex space-x-8 text-slate-300 font-medium">
             <Link to="/" className="nav-link hover:text-white transition">Home</Link>
-            <Link to="/services" className="nav-link text-blue-400 hover:text-white transition">Services</Link>
+            <Link to="/services" className="nav-link text-[#D90429] hover:text-white transition">Services</Link>
             <Link to="/insights" className="nav-link hover:text-white transition">Insights</Link>
             <Link to="/about" className="nav-link hover:text-white transition">About</Link>
             <Link to="/contact" className="nav-link hover:text-white transition">Contact</Link>
@@ -360,7 +329,7 @@ export default function ServicesPage() {
 
           <Link
             to="/contact"
-            className="hidden md:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm hover:shadow-lg hover:shadow-blue-500/20 transition-all hover:scale-[1.03]"
+            className="hidden md:flex px-5 py-2.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-semibold text-sm hover:shadow-lg hover:shadow-[#D90429]/20 transition-all hover:scale-[1.03]"
           >
             Get Started
           </Link>
@@ -390,7 +359,7 @@ export default function ServicesPage() {
             <span>Home</span>
             <i className="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200"></i>
           </Link>
-          <Link to="/services" className="mobile-menu-link group text-blue-400 font-semibold">
+          <Link to="/services" className="mobile-menu-link group text-[#D90429] font-semibold">
             <span>Services</span>
             <i className="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition duration-200"></i>
           </Link>
@@ -409,7 +378,7 @@ export default function ServicesPage() {
           <div className="mobile-menu-cta pt-2">
             <Link
               to="/contact"
-              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-center text-sm shadow-lg shadow-blue-500/10 hover:shadow-blue-500/25 transition duration-300"
+              className="block w-full py-3.5 rounded-full bg-gradient-to-r from-[#D90429] to-[#B50321] text-white font-bold text-center text-sm shadow-lg shadow-[#D90429]/10 hover:shadow-[#D90429]/25 transition duration-300"
             >
               Get Started
             </Link>
@@ -420,19 +389,19 @@ export default function ServicesPage() {
       {/* ── HERO ── */}
       <section className="relative pt-40 pb-28 overflow-hidden">
         {/* Glow blobs */}
-        <div className="absolute top-1/4 left-1/5 w-[500px] h-[500px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/5 w-[500px] h-[500px] bg-[#D90429]/15 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#FF1744]/10 rounded-full blur-[100px] pointer-events-none" />
         {/* Grid overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-semibold tracking-wide mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D90429]/10 border border-[#D90429]/20 text-red-300 text-xs font-semibold tracking-wide mb-6"
             data-aos="fade-down"
           >
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF1744] opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D90429]" />
             </span>
             6 Core Service Areas · Full-Stack Delivery
           </div>
@@ -467,7 +436,7 @@ export default function ServicesPage() {
               to="/contact"
               className="btn-secondary-dark px-8 py-4 rounded-full font-semibold text-white flex items-center gap-2 hover:scale-[1.02] transition"
             >
-              <i className="fas fa-comments text-xs text-blue-400" /> Free Consultation
+              <i className="fas fa-comments text-xs text-[#D90429]" /> Free Consultation
             </Link>
           </div>
 
@@ -648,10 +617,10 @@ export default function ServicesPage() {
 
       {/* ── PROCESS SECTION ── */}
       <section className="py-28 bg-[#0B0F19] relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#D90429]/10 rounded-full blur-[150px] pointer-events-none" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-            <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3.5 py-1.5 rounded-full inline-block mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#FF1744] bg-[#D90429]/10 border border-[#D90429]/20 px-3.5 py-1.5 rounded-full inline-block mb-4">
               Our Process
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.1]">
@@ -667,14 +636,14 @@ export default function ServicesPage() {
             {process.map((step, i) => (
               <div
                 key={step.step}
-                className="svc-process-card p-7 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-sm hover:border-blue-500/20 hover:bg-white/[0.04] transition-all duration-300 group"
+                className="svc-process-card p-7 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-sm hover:border-[#D90429]/20 hover:bg-white/[0.04] transition-all duration-300 group"
                 data-aos="fade-up"
                 data-aos-delay={i * 100}
               >
-                <div className="text-5xl font-black bg-gradient-to-r from-blue-500/20 to-purple-500/20 bg-clip-text text-transparent mb-4 leading-none">
+                <div className="text-5xl font-black bg-gradient-to-r from-[#D90429]/20 to-[#FF1744]/20 bg-clip-text text-transparent mb-4 leading-none">
                   {step.step}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition">{step.title}</h3>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#D90429] transition">{step.title}</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
               </div>
             ))}
@@ -686,7 +655,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-[#F8FAFC] border-t border-slate-100">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-12" data-aos="fade-up">
-            <span className="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3.5 py-1.5 rounded-full inline-block mb-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#FF1744] bg-[#D90429]/10 px-3.5 py-1.5 rounded-full inline-block mb-4">
               Tech Stack
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
@@ -725,13 +694,13 @@ export default function ServicesPage() {
 
       {/* ── FINAL CTA ── */}
       <section className="py-28 bg-white border-t border-slate-100 relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#D90429] to-[#FF1744]" />
         <div className="container mx-auto px-6 relative z-10">
           <div
             className="max-w-4xl mx-auto bg-[#0B0F19] rounded-3xl p-12 md:p-16 border border-white/10 shadow-2xl text-center"
             data-aos="zoom-in"
           >
-            <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3.5 py-1.5 rounded-full inline-block mb-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#FF1744] bg-[#D90429]/10 border border-[#D90429]/20 px-3.5 py-1.5 rounded-full inline-block mb-6">
               Ready to Build?
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
@@ -752,7 +721,7 @@ export default function ServicesPage() {
                 to="/"
                 className="btn-secondary-dark px-10 py-4 rounded-full font-semibold text-white flex items-center gap-2 hover:scale-[1.02] transition text-base"
               >
-                <i className="fas fa-home text-sm text-blue-400" /> Back to Home
+                <i className="fas fa-home text-sm text-[#D90429]" /> Back to Home
               </Link>
             </div>
           </div>
@@ -760,7 +729,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="svc-footer bg-[#07090e] text-slate-400 relative z-10 pt-16 pb-8">
+      <footer className="svc-footer bg-[#0A0A0A] text-slate-400 relative z-10 pt-16 pb-8">
         <div className="container mx-auto px-6">
 
           {/* Main Grid */}
@@ -769,32 +738,7 @@ export default function ServicesPage() {
             {/* Col 1 — Brand */}
             <div className="space-y-5 svc-footer-col-1">
               <div>
-                <div className="flex items-center gap-2 mb-1">
-                  {/* SVG Logo Icon */}
-                  <svg viewBox="0 0 100 100" className="w-6 h-6 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <linearGradient id="divoai-svc-footer-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#3B82F6" />
-                        <stop offset="100%" stopColor="#8B5CF6" />
-                      </linearGradient>
-                    </defs>
-                    <path 
-                      d="M26 80 L50 28 L74 80" 
-                      stroke="url(#divoai-svc-footer-gradient)" 
-                      strokeWidth="15" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                    />
-                    <circle cx="50" cy="74" r="8" fill="url(#divoai-svc-footer-gradient)" />
-                  </svg>
-                  {/* Brand Text */}
-                  <div className="text-2xl font-black transition flex items-center text-white tracking-tight">
-                    <span>Divo</span>
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent ml-0.5">AI</span>
-                  </div>
-                  <div className="w-1 h-6 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
-                </div>
-                <span className="text-[10px] font-semibold tracking-widest text-slate-500 uppercase">IT Solutions</span>
+                                  <img src="/logo.png" alt="DivoAI Logo" className="h-8 md:h-10 w-auto object-contain mb-2 scale-[2.5] md:scale-[3] origin-left" />
               </div>
               <p className="text-sm leading-relaxed text-slate-500">
                 DivoAI IT Solutions delivers modern websites, powerful software tools, and intelligent IT systems tailored for today's businesses. Every solution we create is designed to be fast, secure, scalable, and user-focused.
@@ -802,19 +746,19 @@ export default function ServicesPage() {
               {/* Social Icons */}
               <div className="flex gap-3 pt-1">
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-blue-400 hover:border-blue-500/40 hover:bg-blue-500/10 transition-all duration-200">
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200">
                   <i className="fab fa-linkedin text-sm"></i>
                 </a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-pink-400 hover:border-pink-500/40 hover:bg-pink-500/10 transition-all duration-200">
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200">
                   <i className="fab fa-instagram text-sm"></i>
                 </a>
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-sky-400 hover:border-sky-500/40 hover:bg-sky-500/10 transition-all duration-200">
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200">
                   <i className="fab fa-twitter text-sm"></i>
                 </a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-white/30 hover:bg-white/10 transition-all duration-200">
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-[#D90429] hover:border-[#D90429]/40 hover:bg-[#D90429]/10 transition-all duration-200">
                   <i className="fab fa-github text-sm"></i>
                 </a>
               </div>
@@ -823,7 +767,7 @@ export default function ServicesPage() {
             {/* Col 2 — Quick Links */}
             <div className="svc-footer-col-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full"></div>
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Quick Links</h5>
               </div>
               <ul className="space-y-3.5">
@@ -835,8 +779,8 @@ export default function ServicesPage() {
                   { label: 'Contact Us', to: '/contact' },
                 ].map(({ label, to }) => (
                   <li key={label}>
-                    <Link to={to} className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
+                    <Link to={to} className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group">
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
                       <span className="footer-link-text">{label}</span>
                     </Link>
                   </li>
@@ -847,7 +791,7 @@ export default function ServicesPage() {
             {/* Col 3 — Our Services */}
             <div className="svc-footer-col-3">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full"></div>
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Our Services</h5>
               </div>
               <ul className="space-y-3.5">
@@ -859,8 +803,8 @@ export default function ServicesPage() {
                   { label: 'IT Support', id: 'it-support' },
                 ].map(({ label, id }) => (
                   <li key={label}>
-                    <a href={`#${id}`} className="text-sm text-slate-500 hover:text-blue-400 transition-colors duration-200 flex items-center gap-2 group">
-                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
+                    <a href={`#${id}`} className="text-sm text-slate-500 hover:text-[#D90429] transition-colors duration-200 flex items-center gap-2 group">
+                      <i className="fas fa-chevron-right text-[10px] bg-gradient-to-r from-[#D90429] to-[#FF1744] bg-clip-text text-transparent group-hover:translate-x-0.5 transition-all duration-200"></i>
                       <span className="footer-link-text">{label}</span>
                     </a>
                   </li>
@@ -871,14 +815,14 @@ export default function ServicesPage() {
             {/* Col 4 — Contact Us */}
             <div className="svc-footer-col-4">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-7 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div className="w-7 h-0.5 bg-gradient-to-r from-[#D90429] to-[#FF1744] rounded-full"></div>
                 <h5 className="text-xs font-bold uppercase tracking-widest text-white">Contact Us</h5>
               </div>
               <ul className="space-y-3.5">
                 {/* Location */}
                 <li className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <i className="fas fa-map-marker-alt text-xs text-blue-400"></i>
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/15 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i className="fas fa-map-marker-alt text-xs text-[#D90429]"></i>
                   </div>
                   <div>
                     <p className="text-sm text-slate-400 leading-relaxed">Bengaluru, India</p>
@@ -886,19 +830,19 @@ export default function ServicesPage() {
                 </li>
                 {/* Email */}
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-envelope text-xs text-purple-400"></i>
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/15 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-envelope text-xs text-[#D90429]"></i>
                   </div>
-                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-purple-400 transition-colors duration-200">
+                  <a href="mailto:hello@divoai.com" className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200">
                     hello@divoai.com
                   </a>
                 </li>
                 {/* Phone */}
                 <li className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/20 flex items-center justify-center flex-shrink-0">
-                    <i className="fas fa-phone-alt text-xs text-blue-400"></i>
+                  <div className="w-8 h-8 rounded-lg bg-[#D90429]/15 border border-[#D90429]/20 flex items-center justify-center flex-shrink-0">
+                    <i className="fas fa-phone-alt text-xs text-[#D90429]"></i>
                   </div>
-                  <a href="tel:+917260912860" className="text-sm text-slate-400 hover:text-blue-400 transition-colors duration-200">
+                  <a href="tel:+917260912860" className="text-sm text-slate-400 hover:text-[#D90429] transition-colors duration-200">
                     +91 72609 12860
                   </a>
                 </li>
@@ -911,8 +855,8 @@ export default function ServicesPage() {
           <div className="svc-footer-bottom-bar border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
             <p>© 2026 <span className="text-slate-200 font-semibold">DivoAI IT Solutions</span> — Building Digital Products That Scale. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors duration-200">Privacy Policy</a>
+              <a href="#" className="text-slate-400 hover:text-[#D90429] transition-colors duration-200">Terms of Service</a>
+              <a href="#" className="text-slate-400 hover:text-[#D90429] transition-colors duration-200">Privacy Policy</a>
               <span className="text-slate-500">ISO 27001 Certified</span>
             </div>
           </div>
