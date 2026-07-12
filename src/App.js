@@ -499,7 +499,7 @@ function HomePage() {
 
           {/* Mobile Menu Button */}
           <div
-            className="md:hidden text-xl cursor-pointer text-slate-300 hover:text-white transition"
+            className="md:hidden text-xl cursor-pointer text-[#D90429] hover:text-[#FF1744] transition"
             onClick={() => {
               if (!mobileMenuOpen) {
                 setMobileMenuClickCount((prev) => prev + 1);
@@ -583,7 +583,7 @@ function HomePage() {
       {/* HERO SECTION (Dark Theme) */}
       <section
         id="home"
-        className="relative pt-20 pb-24 md:pt-24 md:pb-36 flex items-center overflow-hidden"
+        className="relative pt-10 pb-16 md:pt-24 md:pb-36 flex items-center overflow-hidden"
       >
         {/* Glow Effects */}
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-[#D90429]/15 rounded-full blur-[100px] pulse-glow"></div>

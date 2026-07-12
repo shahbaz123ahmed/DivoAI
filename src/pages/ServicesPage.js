@@ -335,7 +335,7 @@ export default function ServicesPage() {
           </Link>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden text-xl cursor-pointer text-slate-300 hover:text-white transition" onClick={() => {
+          <div className="md:hidden text-xl cursor-pointer text-[#D90429] hover:text-[#FF1744] transition" onClick={() => {
             if (!mobileMenuOpen) {
               setMobileMenuClickCount(prev => prev + 1);
             }
