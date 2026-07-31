@@ -145,11 +145,19 @@ const leadership = [
     glow: 'border-[#D90429]/20 shadow-[#D90429]/5'
   },
   {
-    name: 'Shahbaz Ahmed',
-    role: 'Software Developer',
+    name: ' MD Shahbaz Ahmed',
+    role: 'Senior Software Developer',
     desc: 'Transforming complex ideas and business requirements into scalable, efficient, and user-focused digital solutions through modern technologies, clean architecture, and exceptional user experiences.',
     icon: 'fa-bezier-curve',
     image: '/shahbaz.jpg',
+    glow: 'border-[#D90429]/20 shadow-[#D90429]/5'
+  }
+  {
+    name: 'Abhijeet Kumar',
+    role: 'Head of UI/UX & Design',
+    desc: 'Translating complex business requirements into intuitive, breathtaking, and user-friendly digital experiences. replace with software developer.',
+    icon: 'fa-bezier-curve',
+    image: '/Abhijeet.jpeg',
     glow: 'border-[#D90429]/20 shadow-[#D90429]/5'
   }
 ];
