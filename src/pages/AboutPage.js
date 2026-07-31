@@ -157,7 +157,7 @@ const leadership = [
     role: 'Head of UI/UX & Design',
     desc: 'Translating complex business requirements into intuitive, breathtaking, and user-friendly digital experiences. replace with software developer.',
     icon: 'fa-bezier-curve',
-    image: '/Abhijeet.jpeg',
+    image: '/shahbaz.jpg',
     glow: 'border-[#D90429]/20 shadow-[#D90429]/5'
   }
 ];
